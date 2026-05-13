@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>怎么用好 Claude Code</title>
+<meta name="description" content="约束先行——用好 Claude Code 的核心秘诀。学会写 CLAUDE.md，让 AI 更聪明、更听话。">
+<meta property="og:title" content="怎么用好 Claude Code">
+<meta property="og:description" content="约束先行——用好 Claude Code 的核心秘诀。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@200;300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">claude code</a>
+  <div class="nav-links">
+    <a href="index.html">为什么用</a>
+    <a href="install.html">怎么安装</a>
+    <a href="usage.html" class="active">怎么用好</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" style="min-height:100vh;">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// usage</p>
+    <h1 style="min-height:90px;">
+      <span class="decode" data-decode-hero data-decode-delay="800" data-text="约束先行">约束先行</span>
+    </h1>
+    <p class="hero-sub">
+      <span class="decode" data-decode-hero data-decode-delay="2200" data-text="用好 Claude Code 的核心，不是 Skills，不是 Prompt 技巧，">用好 Claude Code 的核心，不是 Skills，不是 Prompt 技巧，</span><br>
+      <span class="decode" data-decode-hero data-decode-delay="3000" data-text="而是这四个字：约束先行。">而是这四个字：约束先行。</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin:0 auto;">
+      <div class="section-tag">// 真实故事</div>
+      <h2 class="section-title" style="margin-bottom:28px;"><span class="decode" data-text="工作区乱了">工作区乱了</span></h2>
+      <div class="prose">
+        <p style="margin-bottom:18px;">有人新建了一个给 Claude Code 用的 Skills 开发文件夹，几天后打开一看：</p>
+        <p style="margin-bottom:18px;">根目录散了十几个东西。打包文件跟源码混在一起，测试图片随便丢，评估报告找不到归属。</p>
+        <p style="margin-bottom:18px;">最离谱的是命名——<code>test_batch</code> 是哪个 Skill 的测试？<code>test_v2</code> 又是谁的 v2？自己做的东西，放了两天自己都看不出来。</p>
+        <p style="margin-bottom:18px;">让 Claude Code 收拾完之后，他反思了一个问题：</p>
+      </div>
+      <blockquote class="pull-quote">
+        "为什么 Claude Code 进到新文件夹，自己不会给自己定规范？一定要我给它定？"
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANSWER ============ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin:0 auto;">
+      <div class="section-tag">// 答案</div>
+      <h2 class="section-title" style="margin-bottom:28px;"><span class="decode" data-text="因为顶层约束没做好">因为顶层约束没做好</span></h2>
+      <div class="prose">
+        <p style="margin-bottom:18px;">对于 AI 来说，<strong style="color:var(--ink);">你脑子里知道的东西，如果没有写进文档，就是不存在的。</strong></p>
+        <p style="margin-bottom:18px;">Agent 的短期记忆会丢失，对话框一关全忘了。下次打开，它唯一能看到的就是你留下来的文档和记忆文件。</p>
+        <p style="margin-bottom:18px;">你的文档里写了什么，是不是足够清晰，直接决定了 Agent 每一次醒来的时候，是清醒的还是懵的。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUR LAYERS ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">四层体系</div>
+      <h2 class="section-title">CLAUDE.md 四层结构</h2>
+      <p class="section-desc">约束从上往下穿透，一层管一层。跟治理公司一样：制度在最上面，部门规范在中间，操作流程在最下面。</p>
+    </div>
+
+    <div class="pyramid-wrap reveal">
+      <div class="pyramid">
+        <div class="pyramid-layer" data-layer="1">
+          <div class="pyramid-bar">
+            <span class="pyramid-num">01</span>
+            <span class="pyramid-name">全局 CLAUDE.md</span>
+          </div>
+        </div>
+        <div class="pyramid-layer" data-layer="2">
+          <div class="pyramid-bar">
+            <span class="pyramid-num">02</span>
+            <span class="pyramid-name">项目 CLAUDE.md</span>
+          </div>
+        </div>
+        <div class="pyramid-layer" data-layer="3">
+          <div class="pyramid-bar">
+            <span class="pyramid-num">03</span>
+            <span class="pyramid-name">规范文档</span>
+          </div>
+        </div>
+        <div class="pyramid-layer" data-layer="4">
+          <div class="pyramid-bar">
+            <span class="pyramid-num">04</span>
+            <span class="pyramid-name">记忆文件</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pyramid-desc">
+        <div class="pyramid-desc-inner">
+          <div class="pyramid-hint">
+            <span class="pyramid-hint-icon">▸</span>
+            <span>hover 查看各层详解</span>
+          </div>
+          <div class="pyramid-detail" data-desc="1">
+            <div class="pyramid-detail-tag">layer_01 · 最高指令</div>
+            <h3 class="pyramid-detail-title">全局 CLAUDE.md</h3>
+            <p class="pyramid-detail-text">放在 <code>~/.claude/CLAUDE.md</code>，无论打开什么项目都会加载。</p>
+            <p class="pyramid-detail-solve">解决：你是谁、你做事的原则、你希望 AI 用什么方式跟你协作。</p>
+          </div>
+          <div class="pyramid-detail" data-desc="2">
+            <div class="pyramid-detail-tag">layer_02 · 项目宪法</div>
+            <h3 class="pyramid-detail-title">项目 CLAUDE.md</h3>
+            <p class="pyramid-detail-text">放在项目根目录 <code>项目目录/CLAUDE.md</code>，只在打开这个项目时加载。</p>
+            <p class="pyramid-detail-solve">解决：目录结构、命名规范、什么文件放哪里。</p>
+          </div>
+          <div class="pyramid-detail" data-desc="3">
+            <div class="pyramid-detail-tag">layer_03 · 操作说明</div>
+            <h3 class="pyramid-detail-title">规范文档</h3>
+            <p class="pyramid-detail-text">项目里的各种规范文档、设计文档、架构说明。</p>
+            <p class="pyramid-detail-solve">解决：具体的操作流程和技术细节。</p>
+          </div>
+          <div class="pyramid-detail" data-desc="4">
+            <div class="pyramid-detail-tag">layer_04 · 临时笔记</div>
+            <h3 class="pyramid-detail-title">记忆文件</h3>
+            <p class="pyramid-detail-text">Auto Memory、对话记录、Claude 自己给自己做的笔记。</p>
+            <p class="pyramid-detail-solve">解决：跨对话的上下文延续。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const layers = document.querySelectorAll('.pyramid-layer');
+  const hint = document.querySelector('.pyramid-hint');
+  const details = document.querySelectorAll('.pyramid-detail');
+
+  layers.forEach(layer => {
+    layer.addEventListener('mouseenter', () => {
+      const n = layer.dataset.layer;
+      layers.forEach(l => l.classList.remove('active'));
+      layer.classList.add('active');
+      hint.style.display = 'none';
+      details.forEach(d => {
+        d.style.display = d.dataset.desc === n ? 'block' : 'none';
+      });
+    });
+  });
+
+  document.querySelector('.pyramid-wrap').addEventListener('mouseleave', () => {
+    layers.forEach(l => l.classList.remove('active'));
+    hint.style.display = '';
+    details.forEach(d => d.style.display = 'none');
+  });
+})();
+</script>
+
+<!-- ============ ANALOGY ============ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="reveal">
+      <div class="analogy-card">
+        <div class="analogy-visual">
+          <svg viewBox="0 0 600 260" fill="none" xmlns="http://www.w3.org/2000/svg" class="analogy-svg">
+            <!-- Layer 1: Global CLAUDE.md (main road) -->
+            <rect x="190" y="20" width="220" height="44" rx="8" fill="rgba(45,212,168,0.08)" stroke="rgba(45,212,168,0.3)" stroke-width="1"/>
+            <text x="300" y="37" text-anchor="middle" fill="rgba(45,212,168,0.9)" font-family="var(--ff-mono)" font-size="13" font-weight="600">~/.claude/</text>
+            <text x="300" y="54" text-anchor="middle" fill="var(--term-green)" font-family="var(--ff-mono)" font-size="14" font-weight="700">CLAUDE.md</text>
+
+            <!-- Connector lines from global to projects -->
+            <line x1="240" y1="64" x2="120" y2="116" stroke="rgba(245,166,35,0.2)" stroke-width="1"/>
+            <line x1="300" y1="64" x2="300" y2="116" stroke="rgba(245,166,35,0.2)" stroke-width="1"/>
+            <line x1="360" y1="64" x2="480" y2="116" stroke="rgba(245,166,35,0.2)" stroke-width="1"/>
+
+            <!-- Layer 2: Project CLAUDE.md -->
+            <rect x="48" y="116" width="144" height="36" rx="6" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.18)" stroke-width="0.8"/>
+            <text x="120" y="139" text-anchor="middle" fill="rgba(245,166,35,0.8)" font-family="var(--ff-mono)" font-size="12">project-a/</text>
+
+            <rect x="228" y="116" width="144" height="36" rx="6" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.18)" stroke-width="0.8"/>
+            <text x="300" y="139" text-anchor="middle" fill="rgba(245,166,35,0.8)" font-family="var(--ff-mono)" font-size="12">project-b/</text>
+
+            <rect x="408" y="116" width="144" height="36" rx="6" fill="rgba(245,166,35,0.06)" stroke="rgba(245,166,35,0.18)" stroke-width="0.8"/>
+            <text x="480" y="139" text-anchor="middle" fill="rgba(245,166,35,0.8)" font-family="var(--ff-mono)" font-size="12">project-c/</text>
+
+            <!-- Connector lines from project to spec -->
+            <line x1="120" y1="152" x2="120" y2="188" stroke="rgba(245,166,35,0.12)" stroke-width="0.8"/>
+            <line x1="300" y1="152" x2="300" y2="188" stroke="rgba(245,166,35,0.12)" stroke-width="0.8"/>
+            <line x1="480" y1="152" x2="480" y2="188" stroke="rgba(245,166,35,0.12)" stroke-width="0.8"/>
+
+            <!-- Layer 3: Spec docs -->
+            <rect x="64" y="188" width="112" height="30" rx="5" fill="rgba(245,166,35,0.03)" stroke="rgba(245,166,35,0.1)" stroke-width="0.6"/>
+            <text x="120" y="208" text-anchor="middle" fill="rgba(245,166,35,0.7)" font-family="var(--ff-mono)" font-size="11">规范文档</text>
+
+            <rect x="244" y="188" width="112" height="30" rx="5" fill="rgba(245,166,35,0.03)" stroke="rgba(245,166,35,0.1)" stroke-width="0.6"/>
+            <text x="300" y="208" text-anchor="middle" fill="rgba(245,166,35,0.7)" font-family="var(--ff-mono)" font-size="11">规范文档</text>
+
+            <rect x="424" y="188" width="112" height="30" rx="5" fill="rgba(245,166,35,0.03)" stroke="rgba(245,166,35,0.1)" stroke-width="0.6"/>
+            <text x="480" y="208" text-anchor="middle" fill="rgba(245,166,35,0.7)" font-family="var(--ff-mono)" font-size="11">规范文档</text>
+
+            <!-- Layer 4: Memory -->
+            <rect x="216" y="228" width="168" height="26" rx="5" fill="rgba(245,166,35,0.02)" stroke="rgba(245,166,35,0.07)" stroke-width="0.5" stroke-dasharray="3 2"/>
+            <text x="300" y="245" text-anchor="middle" fill="rgba(245,166,35,0.55)" font-family="var(--ff-mono)" font-size="10">记忆文件 memory/</text>
+
+            <!-- Animated pulse on main node -->
+            <circle cx="300" cy="42" r="24" fill="none" stroke="rgba(45,212,168,0.15)" stroke-width="0.8">
+              <animate attributeName="r" values="24;34;24" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.3;0;0.3" dur="3s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+        <div class="analogy-text">
+          <blockquote>游戏前期最重要的不是赶紧建建建，而是先把路网规划好。路网一旦规划歪了，后面再怎么优化都没招，只能推倒重来。</blockquote>
+          <p class="quote-author">你的 CLAUDE.md 就是你的路网。全局 CLAUDE.md 是城市主干道，项目 CLAUDE.md 是片区支路。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEMPLATE ============ -->
+<section class="section" id="template">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">直接复用</div>
+      <h2 class="section-title">全局 CLAUDE.md 模板</h2>
+      <p class="section-desc">一共 30 多行，分成六个部分。每个块都跨项目通用。在「关于我」里写上你自己的内容，其他基本可以直接复用。</p>
+    </div>
+
+    <div class="reveal">
+      <div class="callout callout-warn" style="margin-bottom:24px;">
+        <div class="callout-label">关键数字</div>
+        <p>CLAUDE.md 不是越长越好。超过 <strong style="color:var(--term-amber);">80 行</strong>，Claude 开始遗漏内容。最多最多，不要超过 <strong style="color:var(--term-amber);">200 行</strong>。</p>
+      </div>
+
+      <div class="terminal template-terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-bar-title">CLAUDE.md</span>
+          <button class="template-copy-btn" onclick="copyTemplate()">复制全文</button>
+        </div>
+        <div class="template-body template-body" id="template-body">
+          <div class="template-lines" id="template-lines"></div>
+          <div class="template-fade"></div>
+        </div>
+        <div class="template-expand" onclick="toggleTemplate()">
+          <span id="template-expand-text">展开全部</span>
+          <span class="template-expand-icon">▾</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT CLAUDE.MD ============ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">下一层</div>
+      <h2 class="section-title">项目 CLAUDE.md 怎么写</h2>
+      <p class="section-desc">全局定好了，项目级的更简单——你甚至不用自己写。</p>
+    </div>
+
+    <div class="reveal" style="max-width:900px;margin:0 auto;">
+      <div class="play-frame">
+        <div class="play-corner play-corner-tl"></div>
+        <div class="play-corner play-corner-tr"></div>
+        <div class="play-corner play-corner-bl"></div>
+        <div class="play-corner play-corner-br"></div>
+
+        <div class="play-row play-row-top">
+          <span class="play-char">聊</span>
+          <span class="play-text">需求、聊想法、聊规划，把你的思路和 Claude Code 畅快地聊出来。</span>
+        </div>
+
+        <div class="play-body">
+          <p>有了项目 CLAUDE.md 之后，它就会自动判断这是不是一个新产品，如果是的话，直接帮你新建文件夹开始做，整个文件管理井井有条。</p>
+          <p>约束定好了，就可以开始——</p>
+        </div>
+
+        <div class="play-row play-row-bottom">
+          <span class="play-text">做网站、玩小程序、玩笔记整理。全局 CLAUDE.md 是你的主干道，项目 CLAUDE.md 是你的支路。主干道规划好了，支路自然就顺了。</span>
+          <span class="play-char">玩</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin:0 auto;text-align:center;">
+      <div class="section-tag">// 总结</div>
+      <h2 class="section-title" style="margin-bottom:28px;line-height:1.25;">
+        你花一个小时写好 CLAUDE.md，<br>后面能省无数个小时的返工。
+      </h2>
+      <div class="prose" style="margin-bottom:36px;">
+        <p>引导 Agent，跟管理公司没什么两样。</p>
+        <p>你也要制度、要规范、要 SOP、要规矩。</p>
+        <p>先想清楚你要什么，定好规则，然后在规则框架里做出最优解。</p>
+        <p style="font-family:var(--ff-serif-cn);font-size:clamp(17px,2.5vw,22px);color:var(--ink);margin-top:28px;"><span class="decode" data-text="这就是最棒的方法。">这就是最棒的方法。</span></p>
+      </div>
+      <div class="btn-group">
+        <a href="install.html" class="btn btn-primary">→ 还没装？先去安装</a>
+        <a href="index.html" class="btn btn-secondary">返回首页</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-mark">Made with Claude Code</div>
+  <p class="footer-line">by 小满 · 2026</p>
+  <p class="footer-line en">This page was made by Claude Code — and so can yours.</p>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+(function(){
+  const raw = `## 关于我
+[你的名字 / 身份 / 职业背景，非程序员的话一定要写出来]。
+我用 Claude Code 做 [具体用途 1] 和 [具体用途 2]。
+
+## 思维原则
+所有决策从问题本质出发，不因「惯例如此」照搬。
+回到问题本身：要解决什么？最直接的路径是什么？从零设计会怎么做？
+不要谄媚。不要夸我的想法好、不要说「这是个很好的问题」、不要开头加「当然可以」。
+给我真实判断，方案有问题直接指出来。发现更好的做法直接说，不用等我问。
+
+## 约束先行
+无论开发项目还是知识管理项目，第一步永远是建规则：新项目先写 CLAUDE.md，新目录先定结构约定（什么放哪、怎么命名、何时清理）。
+没有规范的工作空间不动手。已有规范的项目，严格遵守其 CLAUDE.md 中的约定。需要调整规范时先改文档、再改实践，不要反过来。
+
+## 沟通方式
+- 默认中文，代码、命令、变量名用英文
+- 结论先行，再给理由，不要先铺垫背景
+- 遇到模糊需求，先给最合理的方案，再问要不要调整
+- 不要问「你确定要这样吗」，除非命中下方红线
+
+## 自主边界（红线，必须先问我）
+以下操作即使在 auto-accept 模式下也必须停下来问我：
+- 删除文件、目录或 git 历史
+- 修改 .env、密钥、token、CI/CD 配置
+- 数据库 schema 变更或数据迁移
+- git push、git rebase、git reset --hard、强制推送
+- 安装新的全局依赖或修改系统配置
+- 公开发布（npm publish、部署到生产、发文章等）
+
+## 通用工程纪律
+- 改完主动跑验证（具体命令见各项目 CLAUDE.md），不要只改不验
+- 不要为了让代码跑起来注释掉报错或加绕过标记，找根本原因
+- 密钥、token、密码不进代码、不进 commit、不进日志
+- 大改动前先在 Plan Mode 出方案，我确认后再动手`;
+
+  const lines = raw.split('\n');
+  const container = document.getElementById('template-lines');
+
+  lines.forEach((text, i) => {
+    const line = document.createElement('div');
+    line.className = 'template-line' + (text.startsWith('##') ? ' heading' : '') + (text === '' ? ' empty' : '');
+    line.innerHTML = `<span class="template-line-num">${i + 1}</span><span class="template-line-content">${text || '&nbsp;'}</span>`;
+    container.appendChild(line);
+  });
+
+  window.toggleTemplate = function() {
+    const body = document.getElementById('template-body');
+    const text = document.getElementById('template-expand-text');
+    body.classList.toggle('expanded');
+    text.textContent = body.classList.contains('expanded') ? '收起' : '展开全部';
+  };
+
+  window.copyTemplate = function() {
+    const btn = document.querySelector('.template-copy-btn');
+    navigator.clipboard.writeText(raw).then(() => {
+      btn.textContent = '已复制 ✓';
+      btn.style.color = 'var(--term-green)';
+      setTimeout(() => { btn.textContent = '复制全文'; btn.style.color = ''; }, 2000);
+    }).catch(() => {
+      btn.textContent = '复制失败';
+      setTimeout(() => { btn.textContent = '复制全文'; }, 2000);
+    });
+  };
+})();
+</script>
+</body>
+</html>

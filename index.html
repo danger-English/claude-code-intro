@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>为什么要用 Claude Code</title>
+<meta name="description" content="Claude Code 能做什么？用一句话做出网页、小程序、游戏。不需要会写代码，只需要会说话。">
+<meta property="og:title" content="为什么要用 Claude Code">
+<meta property="og:description" content="用一句话做出网页、小程序、游戏。不需要会写代码，只需要会说话。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@200;300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">claude code</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">为什么用</a>
+    <a href="install.html">怎么安装</a>
+    <a href="usage.html">怎么用好</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// 不需要会写代码，只需要会说话</p>
+    <h1><span class="decode" data-decode-hero data-decode-delay="1200" data-text="一句话，一个产品。">一句话，一个产品。</span></h1>
+    <p class="hero-sub">
+      Claude Code 是世界上最强大的 AI 编程助手。<br>
+      你告诉它想要什么，它就帮你做出来。
+    </p>
+    <div class="hero-rule"></div>
+    <div class="btn-group" style="opacity:0;animation:fadeUp 0.6s 1.2s var(--ease-out) forwards;">
+      <a href="install.html" class="btn btn-primary">→ 开始安装</a>
+      <a href="usage.html" class="btn btn-secondary">怎么用好</a>
+    </div>
+
+    <!-- Terminal Simulation -->
+    <div class="hero-terminal">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot r"></div>
+          <div class="terminal-dot y"></div>
+          <div class="terminal-dot g"></div>
+          <span class="terminal-bar-title">claude-code — ~/my-project</span>
+        </div>
+        <div class="terminal-body" id="term-hero">
+          <!-- Lines injected by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<!-- ============ SHOWCASE ============ -->
+<section class="showcase">
+
+  <div class="showcase-item">
+    <div class="showcase-inner reveal">
+      <div class="showcase-text">
+        <div class="showcase-tag">// case_01</div>
+        <h2 class="showcase-title">一句话，一个网页</h2>
+        <p class="showcase-desc">不需要写代码，不需要学框架，不需要请前端工程师。你只需要告诉 Claude Code 你想要什么，它就做出来了。</p>
+        <div class="showcase-prompt">给我做一个关于中文语法特点的文章网页</div>
+      </div>
+      <div class="showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/chinese-grammar — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">帮我做一个关于中文语法特点的文章网页</div>
+            <div class="showcase-img">
+              <img src="images/showcase/webpage.png" alt="Claude Code 制作的网页作品">
+            </div>
+          </div>
+          <div class="terminal-status">✓ index.html created</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-item">
+    <div class="showcase-inner reveal">
+      <div class="showcase-text">
+        <div class="showcase-tag">// case_02</div>
+        <h2 class="showcase-title">一个想法，一个产品</h2>
+        <p class="showcase-desc">从零开始，从想法到上线。Claude Code 不只是写代码，它帮你思考、设计、实现、部署。</p>
+        <div class="showcase-prompt">我想做一个帮助别人养成习惯的小程序</div>
+      </div>
+      <div class="showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/habit-tracker — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">我想做一个帮助别人养成习惯的小程序</div>
+            <div class="showcase-img">
+              <img src="images/showcase/miniprogram.png" alt="Claude Code 制作的小程序作品">
+            </div>
+          </div>
+          <div class="terminal-status">✓ miniprogram built — 4 components, 12 files</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-item">
+    <div class="showcase-inner reveal">
+      <div class="showcase-text">
+        <div class="showcase-tag">// case_03</div>
+        <h2 class="showcase-title">一个脑洞，一个游戏</h2>
+        <p class="showcase-desc">想做一个视觉小说？想做一个恋爱模拟？甚至想做一个完整的 Galgame？告诉 Claude Code，它帮你写出来。</p>
+        <div class="showcase-prompt">帮我做一个校园题材的 Galgame 视觉小说</div>
+        <a href="https://qianshaozhan-lamplighter-game-lite.netlify.app/" target="_blank" class="showcase-link">→ 试玩这个游戏</a>
+      </div>
+      <div class="showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/galgame-vn — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">帮我做一个校园题材的 Galgame 视觉小说</div>
+            <div class="showcase-img">
+              <img src="images/showcase/game.png" alt="Claude Code 制作的游戏作品">
+            </div>
+          </div>
+          <div class="terminal-status">✓ game ready — 5 routes, 23 dialogue scenes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-num" data-count="1">0</div>
+        <div class="stat-label">句话，一个产品</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="5" data-prefix="<" data-suffix=" min">0</div>
+        <div class="stat-label">安装完成</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="30" data-suffix="+">0</div>
+        <div class="stat-label">行 CLAUDE.md</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-static="∞">∞</div>
+        <div class="stat-label">种可能</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">Why Claude Code</div>
+      <h2 class="section-title">为什么是 Claude Code？</h2>
+      <p class="section-desc">市面上有很多 AI 编程工具，但 Claude Code 是最特别的那一个。</p>
+    </div>
+    <div class="grid-3 reveal">
+      <div class="card">
+        <h3>最好的 Agent 框架</h3>
+        <p>Claude Code 不只是一个代码补全工具，它是一个完整的 AI Agent。它能理解你的意图，拆解任务，自主执行。</p>
+      </div>
+      <div class="card">
+        <h3>搭配任何模型</h3>
+        <p>不需要 Claude 账号，不需要外国手机号。搭配国产模型（GLM、MiniMax、Kimi），效果依然很好。</p>
+      </div>
+      <div class="card">
+        <h3>不只是写代码</h3>
+        <p>网页、小程序、游戏、工具、自动化脚本……只要你能用语言描述出来的东西，Claude Code 都能帮你做。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="reveal">
+      <div class="quote-block">
+        <blockquote>Claude Code，就是我推荐你的当前 AI 版本的毕业工具。你根本无需使用各种乱七八糟的那些 Agent，用好 Claude Code，你就真的能感受到，什么是最牛逼的 Agent 了。</blockquote>
+        <p class="quote-author">— 数字生命卡兹克</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-tag">Start Now</div>
+      <h2 class="section-title"><span class="decode" data-text="现在，去做。">现在，去做。</span></h2>
+      <p class="section-desc" style="margin-bottom:36px;">你不需要会写代码，只需要会说话。Claude Code 会帮你把想法变成现实。</p>
+      <div class="btn-group">
+        <a href="install.html" class="btn btn-primary">→ 开始安装</a>
+        <a href="usage.html" class="btn btn-secondary">怎么用好</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-mark">Made with Claude Code</div>
+  <p class="footer-line">by 小满 · 2026</p>
+  <p class="footer-line en">This page was made by Claude Code — and so can yours.</p>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+// Hero terminal simulation
+(function(){
+  const box = document.getElementById('term-hero');
+  if (!box) return;
+
+  const lines = [
+    { type: 'prompt', text: 'claude' },
+    { type: 'think', text: '' },
+    { type: 'dim', text: '  ╭──────────────────────────────────────╮' },
+    { type: 'dim', text: '  │  Claude Code v2.1 — ready            │' },
+    { type: 'dim', text: '  ╰──────────────────────────────────────╯' },
+    { type: 'blank' },
+    { type: 'prompt', text: '帮我做一个背单词小程序，要有艾宾浩斯复习曲线' },
+    { type: 'think', text: '' },
+    { type: 'think', text: '  ⟳  analyzing requirements...' },
+    { type: 'file', text: '  ✓  created src/App.tsx' },
+    { type: 'file', text: '  ✓  created src/components/FlashCard.tsx' },
+    { type: 'file', text: '  ✓  created src/utils/spacedRepetition.ts' },
+    { type: 'file', text: '  ✓  created src/styles/global.css' },
+    { type: 'blank' },
+    { type: 'success', text: '  Done — 4 files created, project ready.' },
+  ];
+
+  let i = 0;
+  function addLine() {
+    if (i >= lines.length) return;
+    const l = lines[i];
+    const el = document.createElement('div');
+    el.className = 't-line';
+
+    if (l.type === 'blank') {
+      el.innerHTML = '&nbsp;';
+    } else if (l.type === 'prompt') {
+      el.innerHTML = '<span class="t-prompt"></span>' + l.text;
+    } else if (l.type === 'think') {
+      el.innerHTML = '<span class="t-think">' + l.text + '</span>';
+    } else if (l.type === 'file') {
+      el.innerHTML = '<span class="t-file">' + l.text + '</span>';
+    } else if (l.type === 'success') {
+      el.innerHTML = '<span class="t-success">' + l.text + '</span>';
+    } else {
+      el.innerHTML = '<span class="t-dim">' + l.text + '</span>';
+    }
+
+    box.appendChild(el);
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => el.classList.add('show'));
+    });
+
+    i++;
+    const delay = l.type === 'prompt' ? 1200
+                : l.type === 'think' ? 800
+                : l.type === 'blank' ? 100
+                : l.type === 'success' ? 600
+                : 180;
+    setTimeout(addLine, delay);
+  }
+
+  setTimeout(addLine, 1800);
+})();
+</script>
+</body>
+</html>
