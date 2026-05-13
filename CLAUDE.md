@@ -28,7 +28,7 @@ claude-code-intro/
 **目标**：给小白震撼，建立"Claude Code 很强"的认知
 
 - Hero：一句话钩子
-- 作品展示区：网页、小程序、游戏等真实案例，每个案例展示 prompt → 结果的对比
+- 作品展示区：网页、小程序、游戏等真实案例，每个案例展示 prompt → 结果的对比（游戏案例附带在线试玩链接）
 - 底部两个跳转按钮：「立即安装」→ install.html / 「学会用好」→ usage.html
 
 ### 第二页：怎么安装（install.html）
@@ -105,3 +105,9 @@ claude-code-intro/
 ## 验证方式
 
 本地浏览器直接打开 HTML 文件预览，无需构建步骤。
+
+## 部署
+
+- GitHub Pages，从 master 分支 / (root) 部署
+- 仓库：https://github.com/danger-English/claude-code-intro
+- 线上：https://danger-English.github.io/claude-code-intro/
