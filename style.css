@@ -1621,6 +1621,130 @@ footer {
 }
 
 /* ============================================================
+   SKILL SHOWCASE — full-width skill sections
+   ============================================================ */
+.skill-showcase {
+  padding: clamp(80px, 14vw, 160px) 0;
+}
+.skill-showcase + .skill-showcase { border-top: 1px solid rgba(255,255,255,0.03); }
+
+.skill-showcase-inner {
+  max-width: var(--max-w);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.skill-showcase-text {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.skill-char {
+  font-family: var(--ff-serif-cn);
+  font-weight: 700;
+  font-size: clamp(72px, 11vw, 110px);
+  color: var(--accent);
+  line-height: 1;
+  user-select: none;
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.skill-showcase-meta {
+  padding-top: 8px;
+}
+
+.skill-showcase-title {
+  font-family: var(--ff-mono);
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.skill-showcase-role {
+  font-family: var(--ff-serif-cn);
+  font-size: clamp(15px, 2vw, 18px);
+  font-weight: 300;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.skill-showcase-desc {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.skill-showcase-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-showcase-list li {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.8;
+  padding-left: 16px;
+  position: relative;
+}
+
+.skill-showcase-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+/* ---- Skill Install Terminal ---- */
+.skill-showcase-terminal-wrap {
+  perspective: 1000px;
+}
+
+.skill-showcase-terminal-wrap .showcase-terminal {
+  margin-bottom: 12px;
+}
+
+.showcase-terminal-success {
+  padding: 10px 16px;
+  border-top: 1px solid rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.01);
+  font-family: var(--ff-mono);
+  font-size: 12px;
+}
+
+.skill-install-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: #1A1000;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--ff-mono);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-out);
+  letter-spacing: 0.02em;
+}
+
+.skill-install-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px var(--accent-glow), 0 0 50px rgba(245, 166, 35, 0.08);
+}
+
+.skill-install-btn:active {
+  transform: translateY(0);
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
@@ -1701,4 +1825,16 @@ footer {
   .play-text { font-size: 15px !important; }
 
   footer { padding: 40px var(--gutter); }
+
+  .skill-showcase { padding: clamp(50px, 8vw, 80px) 0; }
+  .skill-showcase-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .skill-showcase-text {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .skill-char { font-size: clamp(60px, 15vw, 100px) !important; }
+  .skill-showcase-meta { padding-top: 0; }
 }

@@ -110,86 +110,202 @@
 </section>
 
 <!-- ============ RECOMMENDED SKILLS ============ -->
-<section class="section" style="background:var(--bg-alt);">
+<section class="section-hd-only" style="padding:clamp(80px,14vw,180px) 0 clamp(40px,6vw,60px);text-align:center;">
   <div class="container">
-    <div class="section-hd reveal">
+    <div class="reveal">
       <div class="section-tag">核心推荐</div>
       <h2 class="section-title">五个必装 Skill</h2>
       <p class="section-desc">从获取到创造，形成完整闭环。</p>
     </div>
+  </div>
+</section>
 
-    <div class="grid-2 reveal" style="max-width:900px;margin:0 auto;gap:20px;">
-
-      <!-- Skill 1: web-access -->
-      <div class="card skill-card">
-        <div class="skill-icon">👁️</div>
-        <h3>web-access</h3>
-        <p class="skill-subtitle">// 眼睛</p>
-        <p>给 Claude Code 一双眼睛，让它能看到网页世界。</p>
-        <ul class="skill-list">
-          <li>访问任意网页，获取实时信息</li>
-          <li>通过 CDP 操控浏览器，完成复杂交互</li>
-          <li>自动获取和安装其他 Skill</li>
-        </ul>
-        <p class="hint-text" style="margin-top:12px;">有了它，其他 Skill 的安装都变得简单。Claude Code 可以直接打开 GitHub，帮你安装你需要的任何 Skill。</p>
+<!-- Skill 1: 眼 — web-access -->
+<section class="skill-showcase" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="skill-showcase-inner reveal">
+      <div class="skill-showcase-text">
+        <div class="skill-char">眼</div>
+        <div class="skill-showcase-meta">
+          <h2 class="skill-showcase-title">web-access</h2>
+          <p class="skill-showcase-role">给 Claude Code 一双眼睛</p>
+          <p class="skill-showcase-desc">有了它，其他 Skill 的安装都变得简单。Claude Code 可以直接打开 GitHub，帮你安装你需要的任何 Skill。</p>
+          <ul class="skill-showcase-list">
+            <li>访问任意网页，获取实时信息</li>
+            <li>通过 CDP 操控浏览器，完成复杂交互</li>
+            <li>自动获取和安装其他 Skill</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Skill 2: superpowers -->
-      <div class="card skill-card">
-        <div class="skill-icon">⚡</div>
-        <h3>superpowers</h3>
-        <p class="skill-subtitle">// 架构</p>
-        <p>让 Claude Code 学会系统性思考，从规划到实现。</p>
-        <ul class="skill-list">
-          <li>Brainstorming：想法 → 完整设计</li>
-          <li>TDD：测试驱动开发，保证质量</li>
-          <li>并行 Agent：多任务同时推进</li>
-        </ul>
-        <p class="hint-text" style="margin-top:12px;">不只是写代码，而是像资深工程师一样思考。从需求分析到代码实现，全流程专业化。</p>
+      <div class="skill-showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/project — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">安装这个 skill，项目地址为: https://github.com/anthropics/skills/tree/main/skills/web-access</div>
+            <div class="showcase-terminal-success">
+              <span class="t-success">✓ Skill installed — web-access ready</span>
+            </div>
+          </div>
+        </div>
+        <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/web-access')">复制安装命令</button>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Skill 3: frontend-design -->
-      <div class="card skill-card">
-        <div class="skill-icon">🎨</div>
-        <h3>frontend-design</h3>
-        <p class="skill-subtitle">// 设计</p>
-        <p>让 Claude Code 做出专业级的前端界面。</p>
-        <ul class="skill-list">
-          <li>高质量 UI 设计，避免 AI 审美</li>
-          <li>组件化架构，可维护性强</li>
-          <li>响应式适配，移动端友好</li>
-        </ul>
-        <p class="hint-text" style="margin-top:12px;">做产品，界面是第一印象。这个 Skill 让 Claude Code 不只是能写代码，还能做出让人惊艳的界面。</p>
+<!-- Skill 2: 思 — superpowers -->
+<section class="skill-showcase">
+  <div class="container">
+    <div class="skill-showcase-inner reveal">
+      <div class="skill-showcase-text">
+        <div class="skill-char">思</div>
+        <div class="skill-showcase-meta">
+          <h2 class="skill-showcase-title">superpowers</h2>
+          <p class="skill-showcase-role">让 Claude Code 学会系统性思考</p>
+          <p class="skill-showcase-desc">不只是写代码，而是像资深工程师一样思考。从需求分析到代码实现，全流程专业化。</p>
+          <ul class="skill-showcase-list">
+            <li>Brainstorming：想法 → 完整设计</li>
+            <li>TDD：测试驱动开发，保证质量</li>
+            <li>并行 Agent：多任务同时推进</li>
+          </ul>
+        </div>
       </div>
-
-      <!-- Skill 4: skill-creator -->
-      <div class="card skill-card">
-        <div class="skill-icon">🔧</div>
-        <h3>skill-creator</h3>
-        <p class="skill-subtitle">// 创造</p>
-        <p>让 Claude Code 帮你创建自己的 Skill。</p>
-        <ul class="skill-list">
-          <li>分析需求，生成 Skill 结构</li>
-          <li>编写 SKILL.md，定义触发条件</li>
-          <li>创建示例和文档</li>
-        </ul>
-        <p class="hint-text" style="margin-top:12px;">当你有了自己的工作流程，把它封装成 Skill，就能无限复用。这个 Skill 让你从使用者变成创造者。</p>
+      <div class="skill-showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/project — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">安装这个 skill，项目地址为: https://github.com/anthropics/skills/tree/main/skills/superpowers</div>
+            <div class="showcase-terminal-success">
+              <span class="t-success">✓ Skill installed — superpowers ready</span>
+            </div>
+          </div>
+        </div>
+        <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/superpowers')">复制安装命令</button>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Skill 5: skill-evolution-manager -->
-      <div class="card skill-card" style="grid-column: span 2;">
-        <div class="skill-icon">🧬</div>
-        <h3>skill-evolution-manager</h3>
-        <p class="skill-subtitle">// 进化</p>
-        <p>让 Skill 在使用中不断优化。</p>
-        <ul class="skill-list">
-          <li>记录 Skill 运行中的错误和经验</li>
-          <li>自动迭代优化 SKILL.md</li>
-          <li>跨会话保持进化记录</li>
-        </ul>
-        <p class="hint-text" style="margin-top:12px;">Skill 不是写完就完了。这个 Skill 让你的 Skill 越用越聪明，越用越顺手。</p>
+<!-- Skill 3: 美 — frontend-design -->
+<section class="skill-showcase" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="skill-showcase-inner reveal">
+      <div class="skill-showcase-text">
+        <div class="skill-char">美</div>
+        <div class="skill-showcase-meta">
+          <h2 class="skill-showcase-title">frontend-design</h2>
+          <p class="skill-showcase-role">做出专业级的前端界面</p>
+          <p class="skill-showcase-desc">做产品，界面是第一印象。这个 Skill 让 Claude Code 不只是能写代码，还能做出让人惊艳的界面。</p>
+          <ul class="skill-showcase-list">
+            <li>高质量 UI 设计，避免 AI 审美</li>
+            <li>组件化架构，可维护性强</li>
+            <li>响应式适配，移动端友好</li>
+          </ul>
+        </div>
       </div>
+      <div class="skill-showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/project — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">安装这个 skill，项目地址为: https://github.com/anthropics/skills/tree/main/skills/frontend-design</div>
+            <div class="showcase-terminal-success">
+              <span class="t-success">✓ Skill installed — frontend-design ready</span>
+            </div>
+          </div>
+        </div>
+        <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/frontend-design')">复制安装命令</button>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Skill 4: 创 — skill-creator -->
+<section class="skill-showcase">
+  <div class="container">
+    <div class="skill-showcase-inner reveal">
+      <div class="skill-showcase-text">
+        <div class="skill-char">创</div>
+        <div class="skill-showcase-meta">
+          <h2 class="skill-showcase-title">skill-creator</h2>
+          <p class="skill-showcase-role">从使用者变成创造者</p>
+          <p class="skill-showcase-desc">当你有了自己的工作流程，把它封装成 Skill，就能无限复用。这个 Skill 让你从使用者变成创造者。</p>
+          <ul class="skill-showcase-list">
+            <li>分析需求，生成 Skill 结构</li>
+            <li>编写 SKILL.md，定义触发条件</li>
+            <li>创建示例和文档</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/project — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">安装这个 skill，项目地址为: https://github.com/anthropics/skills/tree/main/skills/skill-creator</div>
+            <div class="showcase-terminal-success">
+              <span class="t-success">✓ Skill installed — skill-creator ready</span>
+            </div>
+          </div>
+        </div>
+        <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/skill-creator')">复制安装命令</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skill 5: 迭代 — skill-evolution-manager -->
+<section class="skill-showcase" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="skill-showcase-inner reveal">
+      <div class="skill-showcase-text">
+        <div class="skill-char" style="font-size:clamp(56px,8vw,80px);">迭代</div>
+        <div class="skill-showcase-meta">
+          <h2 class="skill-showcase-title">skill-evolution-manager</h2>
+          <p class="skill-showcase-role">让 Skill 越用越聪明</p>
+          <p class="skill-showcase-desc">Skill 不是写完就完了。这个 Skill 让你的 Skill 越用越聪明，越用越顺手。</p>
+          <ul class="skill-showcase-list">
+            <li>记录 Skill 运行中的错误和经验</li>
+            <li>自动迭代优化 SKILL.md</li>
+            <li>跨会话保持进化记录</li>
+          </ul>
+        </div>
+      </div>
+      <div class="skill-showcase-terminal-wrap">
+        <div class="showcase-terminal">
+          <div class="terminal-bar">
+            <div class="terminal-dot r"></div>
+            <div class="terminal-dot y"></div>
+            <div class="terminal-dot g"></div>
+            <span class="terminal-bar-title">~/project — Claude Code</span>
+          </div>
+          <div class="terminal-body">
+            <div class="showcase-cmd">安装这个 skill，项目地址为: https://github.com/anthropics/skills/tree/main/skills/skill-evolution-manager</div>
+            <div class="showcase-terminal-success">
+              <span class="t-success">✓ Skill installed — skill-evolution-manager ready</span>
+            </div>
+          </div>
+        </div>
+        <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/skill-evolution-manager')">复制安装命令</button>
+      </div>
     </div>
   </div>
 </section>
@@ -223,5 +339,25 @@
 </footer>
 
 <script src="shared.js"></script>
+<script>
+function copyInstall(cmd) {
+  navigator.clipboard.writeText(cmd).then(() => {
+    const btn = event.target;
+    const orig = btn.textContent;
+    btn.textContent = '已复制 ✓';
+    btn.style.background = 'var(--term-green)';
+    btn.style.color = '#1A1000';
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 2000);
+  }).catch(() => {
+    const btn = event.target;
+    btn.textContent = '复制失败';
+    setTimeout(() => { btn.textContent = '复制安装命令'; }, 2000);
+  });
+}
+</script>
 </body>
 </html>
