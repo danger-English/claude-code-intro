@@ -1543,6 +1543,65 @@ footer {
 }
 
 /* ============================================================
+   SKILL-SPECIFIC (skills.html)
+   ============================================================ */
+.skill-subtitle {
+  color: var(--accent);
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.skill-list {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.8;
+}
+
+/* ============================================================
+   SKILL CARD
+   ============================================================ */
+.skill-card {
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s var(--ease-out);
+}
+
+.skill-card:hover {
+  border-color: rgba(245, 166, 35, 0.2);
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  filter: grayscale(0.2);
+  transition: filter 0.3s;
+}
+
+.skill-card:hover .skill-icon {
+  filter: grayscale(0);
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skill-card ul li {
+  padding-left: 16px;
+  position: relative;
+}
+
+.skill-card ul li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
