@@ -13,6 +13,7 @@
 | 为什么要用 | [index.html](index.html) | 作品展示（网页 / 小程序 / 游戏）+ 核心优势 |
 | 怎么安装 | [install.html](install.html) | Mac/Windows 安装指南 × 有魔法/无魔法 |
 | 怎么用好 | [usage.html](usage.html) | CLAUDE.md 四层体系 + 可复用模板 |
+| 进阶技巧 | [skills.html](skills.html) | Skill 系统介绍 + 五个核心 Skill 推荐 |
 
 ## 技术栈
 
@@ -31,6 +32,7 @@ claude-code-intro/
 ├── index.html
 ├── install.html
 ├── usage.html
+├── skills.html
 ├── style.css
 ├── shared.js
 └── images/

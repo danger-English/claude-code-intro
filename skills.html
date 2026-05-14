@@ -69,9 +69,9 @@
         <p>所以 Skill 的设计是：<strong style="color:var(--ink);">先放目录，再放章节，最后放附录</strong>。</p>
         <p>Skill 的元信息先加载一小段，让模型知道"有这么个手册，适用范围是啥"。当它判断这次任务真用得上，再把完整的 SKILL.md 读进上下文。要是还不够，再按需去读你在文件夹里附带的其他文件。</p>
       </div>
-      <div class="callout" style="margin-top:24px;">
-        <div class="callout-label">为什么这很重要</div>
-        <p>在大模型交互中，对话越长，模型越笨。Token 在 Agent 架构设计上寸土寸金。渐进式披露既保证执行准确，又省下大量 Token。</p>
+      <div class="pull-quote" style="margin-top:24px;">
+        <div style="font-family:var(--ff-mono);font-size:12px;font-weight:600;color:var(--accent);margin-bottom:8px;">↳ 为什么这很重要</div>
+        <p style="font-size:inherit;color:inherit;line-height:inherit;margin:0;">在大模型交互中，对话越长，模型越笨。Token 在 Agent 架构设计上寸土寸金。渐进式披露既保证执行准确，又省下大量 Token。</p>
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@
       <p class="section-desc">两种方式，选一种就行。</p>
     </div>
 
-    <div class="grid-2 reveal" style="max-width:800px;margin:0 auto;">
+    <div class="grid-3 reveal" style="max-width:960px;margin:0 auto;">
       <div class="card">
         <h3>方法一：命令安装 <span class="badge-recommended">推荐</span></h3>
         <p>直接在 Claude Code 里说：</p>
@@ -94,10 +94,19 @@
           <code>安装这个 skill，skill 项目地址为:<br>https://github.com/anthropics/skills/tree/main/skills/skill-creator</code>
           <button class="copy-btn">Copy</button>
         </div>
-        <p class="hint-text" style="margin-top:12px;">Claude Code 会自动帮你下载并安装。</p>
+        <p class="hint-text" style="margin-top:12px;">复制后直接发给 Claude，它会自动帮你下载并安装。</p>
       </div>
       <div class="card">
-        <h3>方法二：手动安装</h3>
+        <h3>方法二：从本页下载</h3>
+        <p>点击下方「一键下载全部 Skill」按钮，获取打包好的 zip 文件。</p>
+        <div class="code-block" style="margin-top:12px;">
+          <code>解压后放到 ~/.claude/skills/ 目录</code>
+          <button class="copy-btn">Copy</button>
+        </div>
+        <p class="hint-text" style="margin-top:12px;">无需翻墙，文件已内置于本站仓库。Claude Code 支持热重载，无需重启。</p>
+      </div>
+      <div class="card">
+        <h3>方法三：手动安装</h3>
         <p>将 Skill 文件夹放到指定目录：</p>
         <div class="code-block" style="margin-top:12px;">
           <code>~/.claude/skills/</code>
@@ -116,6 +125,8 @@
       <div class="section-tag">核心推荐</div>
       <h2 class="section-title">五个必装 Skill</h2>
       <p class="section-desc">从获取到创造，形成完整闭环。</p>
+      <a href="claude-code-skills.zip" download style="display:inline-block;margin-top:24px;padding:14px 36px;background:var(--accent);color:#1A1000;font-family:var(--mono);font-weight:600;font-size:15px;border-radius:6px;text-decoration:none;transition:all .2s;">一键下载全部 Skill（231KB）</a>
+      <p class="hint-text" style="margin-top:12px;">下载后解压，将文件夹放到 ~/.claude/skills/ 目录即可</p>
     </div>
   </div>
 </section>
@@ -153,6 +164,7 @@
           </div>
         </div>
         <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/web-access')">复制安装命令</button>
+        <a class="skill-install-btn" href="web-access.zip" download style="text-decoration:none;display:inline-block;margin-top:8px;background:var(--ink);color:var(--bg);">下载文件夹（29KB）</a>
       </div>
     </div>
   </div>
@@ -191,6 +203,7 @@
           </div>
         </div>
         <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/superpowers')">复制安装命令</button>
+        <a class="skill-install-btn" href="superpowers.zip" download style="text-decoration:none;display:inline-block;margin-top:8px;background:var(--ink);color:var(--bg);">下载文件夹（121KB）</a>
       </div>
     </div>
   </div>
@@ -229,6 +242,7 @@
           </div>
         </div>
         <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/frontend-design')">复制安装命令</button>
+        <a class="skill-install-btn" href="frontend-design.zip" download style="text-decoration:none;display:inline-block;margin-top:8px;background:var(--ink);color:var(--bg);">下载文件夹（5.9KB）</a>
       </div>
     </div>
   </div>
@@ -267,6 +281,7 @@
           </div>
         </div>
         <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/skill-creator')">复制安装命令</button>
+        <a class="skill-install-btn" href="skill-creator.zip" download style="text-decoration:none;display:inline-block;margin-top:8px;background:var(--ink);color:var(--bg);">下载文件夹（73KB）</a>
       </div>
     </div>
   </div>
@@ -305,6 +320,7 @@
           </div>
         </div>
         <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/anthropics/skills/tree/main/skills/skill-evolution-manager')">复制安装命令</button>
+        <a class="skill-install-btn" href="skill-evolution-manager.zip" download style="text-decoration:none;display:inline-block;margin-top:8px;background:var(--ink);color:var(--bg);">下载文件夹（2.6KB）</a>
       </div>
     </div>
   </div>

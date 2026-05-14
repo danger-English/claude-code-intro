@@ -14,8 +14,8 @@
 
   /* ---- Ink ---- */
   --ink:      #F2EDE8;
-  --ink-2:    #B0ABA5;
-  --ink-3:    #787470;
+  --ink-2:    #D0CBC5;
+  --ink-3:    #9A9590;
 
   /* ---- Terminal palette ---- */
   --term-green:  #2DD4A8;
@@ -62,7 +62,7 @@ body {
   color: var(--ink);
   font-family: var(--ff-sans);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   cursor: none;
@@ -105,7 +105,7 @@ h1 { font-size: clamp(36px, 7.5vw, 88px); }
 h2 { font-size: clamp(28px, 5vw, 52px); }
 h3 { font-size: clamp(18px, 2.5vw, 22px); }
 
-p { color: var(--ink-2); }
+p { color: var(--ink-2); line-height: 1.9; }
 
 a { color: var(--accent); text-decoration: none; }
 
@@ -282,7 +282,7 @@ code:not(.code-block code) {
   font-family: var(--ff-mono);
   font-size: 11px;
   color: var(--ink-3);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .terminal-body {
@@ -296,7 +296,7 @@ code:not(.code-block code) {
 }
 
 .t-prompt { color: var(--term-green); user-select: none; }
-.t-prompt::before { content: '❯ '; opacity: 0.5; }
+.t-prompt::before { content: '❯ '; opacity: 0.7; }
 .t-file { color: var(--term-amber); }
 .t-success { color: var(--term-green); }
 .t-dim { color: var(--ink-3); }
@@ -478,7 +478,7 @@ code:not(.code-block code) {
 .showcase-desc {
   font-size: 15px;
   color: var(--ink-2);
-  line-height: 1.85;
+  line-height: 2;
   margin-bottom: 24px;
 }
 
@@ -490,9 +490,9 @@ code:not(.code-block code) {
   background: var(--term-green-bg);
   border-radius: 6px;
   border-left: 2px solid var(--term-green);
-  line-height: 1.6;
+  line-height: 1.8;
 }
-.showcase-prompt::before { content: '❯ '; opacity: 0.5; }
+.showcase-prompt::before { content: '❯ '; opacity: 0.7; }
 
 .showcase-link {
   display: inline-block;
@@ -548,7 +548,7 @@ code:not(.code-block code) {
   border-bottom: 1px solid rgba(255,255,255,0.03);
   background: rgba(255,255,255,0.01);
 }
-.showcase-cmd::before { content: '❯ '; opacity: 0.4; }
+.showcase-cmd::before { content: '❯ '; opacity: 0.6; }
 
 .showcase-img {
   aspect-ratio: 16 / 10;
@@ -589,7 +589,7 @@ code:not(.code-block code) {
   opacity: 0.6;
   margin-bottom: 14px;
 }
-.section-tag::before { content: '// '; opacity: 0.4; }
+.section-tag::before { content: '// '; opacity: 0.6; }
 
 .section-title { margin-bottom: 12px; }
 
@@ -598,7 +598,7 @@ code:not(.code-block code) {
   color: var(--ink-2);
   max-width: 520px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 /* ============================================================
@@ -607,7 +607,7 @@ code:not(.code-block code) {
 .prose {
   color: var(--ink-2);
   font-size: 15px;
-  line-height: 2;
+  line-height: 2.1;
 }
 .prose p { margin-bottom: 18px; }
 
@@ -616,7 +616,7 @@ code:not(.code-block code) {
   font-size: 12px;
   font-family: var(--ff-mono);
   margin-top: 6px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .pull-quote {
@@ -646,7 +646,7 @@ code:not(.code-block code) {
   transform: translateY(-2px);
 }
 .card h3 { font-size: 16px; margin-bottom: 6px; }
-.card p  { font-size: 14px; line-height: 1.75; }
+.card p  { font-size: 14px; line-height: 1.9; }
 
 /* ============================================================
    STEPS (with timeline)
@@ -683,7 +683,7 @@ code:not(.code-block code) {
 }
 
 .step-body h3 { margin-bottom: 6px; }
-.step-body p  { font-size: 14px; color: var(--ink-2); margin-bottom: 10px; }
+.step-body p  { font-size: 14px; color: var(--ink-2); margin-bottom: 10px; line-height: 1.9; }
 .step-body p:last-child { margin-bottom: 0; }
 
 /* ============================================================
@@ -738,8 +738,8 @@ code:not(.code-block code) {
   margin-bottom: 4px;
   display: flex; align-items: center; gap: 5px;
 }
-.callout-label::before { content: '↳'; opacity: 0.4; }
-.callout p { font-size: 14px; color: var(--ink-2); line-height: 1.7; }
+.callout-label::before { content: '↳'; opacity: 0.6; }
+.callout p { font-size: 14px; color: var(--ink-2); line-height: 1.9; }
 
 .callout-warn {
   background: var(--term-amber-bg);
@@ -850,7 +850,7 @@ code:not(.code-block code) {
   margin-bottom: 10px;
 }
 .layer-card h3 { font-size: 16px; margin-bottom: 8px; }
-.layer-card p  { font-size: 13px; color: var(--ink-2); line-height: 1.8; }
+.layer-card p  { font-size: 13px; color: var(--ink-2); line-height: 1.9; }
 
 /* ============================================================
    PYRAMID (usage.html — four-layer structure)
@@ -1130,7 +1130,7 @@ footer {
   font-size: 13px;
   color: var(--ink-3);
   margin-bottom: 12px;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 .footer-line {
   font-family: var(--ff-mono);
@@ -1634,13 +1634,12 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
+  padding-left: clamp(16px, 5vw, 64px);
 }
 
 .skill-showcase-text {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  position: relative;
 }
 
 .skill-char {
@@ -1650,12 +1649,13 @@ footer {
   color: var(--accent);
   line-height: 1;
   user-select: none;
-  flex-shrink: 0;
   opacity: 0.85;
+  margin-bottom: 8px;
 }
 
 .skill-showcase-meta {
-  padding-top: 8px;
+  margin-left: clamp(32px, 6vw, 80px);
+  margin-top: 16px;
 }
 
 .skill-showcase-title {
@@ -1677,20 +1677,21 @@ footer {
 .skill-showcase-desc {
   font-size: 15px;
   color: var(--ink-2);
-  line-height: 1.85;
+  line-height: 2;
   margin-bottom: 16px;
 }
 
 .skill-showcase-list {
   list-style: none;
   padding: 0;
+  margin-top: 4px;
 }
 
 .skill-showcase-list li {
-  font-size: 14px;
+  font-size: clamp(15px, 1.8vw, 17px);
   color: var(--ink-2);
-  line-height: 1.8;
-  padding-left: 16px;
+  line-height: 2.1;
+  padding-left: 18px;
   position: relative;
 }
 
@@ -1705,6 +1706,7 @@ footer {
 /* ---- Skill Install Terminal ---- */
 .skill-showcase-terminal-wrap {
   perspective: 1000px;
+  margin-top: clamp(88px, calc(11vw + 16px), 126px);
 }
 
 .skill-showcase-terminal-wrap .showcase-terminal {
@@ -1725,6 +1727,7 @@ footer {
   padding: 12px;
   background: var(--accent);
   color: #1A1000;
+  text-align: center;
   border: none;
   border-radius: 8px;
   font-family: var(--ff-mono);
@@ -1832,9 +1835,8 @@ footer {
     gap: 32px;
   }
   .skill-showcase-text {
-    flex-direction: column;
-    gap: 16px;
+    /* block layout — no flex overrides needed */
   }
   .skill-char { font-size: clamp(60px, 15vw, 100px) !important; }
-  .skill-showcase-meta { padding-top: 0; }
+  .skill-showcase-meta { margin-left: 0; margin-top: -0.1em; }
 }
