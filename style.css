@@ -741,6 +741,22 @@ code:not(.code-block code) {
 .callout-label::before { content: '↳'; opacity: 0.6; }
 .callout p { font-size: 14px; color: var(--ink-2); line-height: 1.9; }
 
+.hint-block {
+  font-size: 13px;
+  color: var(--ink-3);
+  line-height: 1.8;
+  margin: 12px 0 18px;
+  padding-left: 1px;
+}
+.hint-block code {
+  background: rgba(245, 166, 35, 0.12);
+  color: var(--accent);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: var(--ff-mono);
+  font-size: 12px;
+}
+
 .callout-warn {
   background: var(--term-amber-bg);
   border-color: rgba(245, 166, 35, 0.1);
