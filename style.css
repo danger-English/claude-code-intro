@@ -1748,6 +1748,87 @@ footer {
 }
 
 /* ============================================================
+   MODEL API LINKS (install.html)
+   ============================================================ */
+.model-links {
+  margin-top: 24px;
+}
+
+.model-links-title {
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+}
+
+.model-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.model-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  text-decoration: none;
+  position: relative;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s var(--ease-out);
+}
+
+.model-link-card:hover {
+  border-color: rgba(245,166,35,0.25);
+  background: var(--bg-hover);
+  transform: translateY(-2px);
+}
+
+.model-link-card.recommended {
+  border-color: rgba(245,166,35,0.15);
+  background: rgba(245,166,35,0.04);
+}
+
+.model-link-card.recommended:hover {
+  border-color: rgba(245,166,35,0.35);
+}
+
+.model-link-badge {
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: #1A1000;
+  background: var(--accent);
+  padding: 1px 6px;
+  border-radius: 3px;
+  align-self: flex-start;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+.model-link-name {
+  font-family: var(--ff-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.model-link-url {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  color: var(--term-green);
+  opacity: 0.7;
+  transition: opacity 0.25s;
+}
+
+.model-link-card:hover .model-link-url {
+  opacity: 1;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
@@ -1839,4 +1920,6 @@ footer {
   }
   .skill-char { font-size: clamp(60px, 15vw, 100px) !important; }
   .skill-showcase-meta { margin-left: 0; margin-top: -0.1em; }
+
+  .model-links-grid { grid-template-columns: repeat(2, 1fr); }
 }
