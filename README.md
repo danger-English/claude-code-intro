@@ -6,7 +6,7 @@
 
 ## 网站结构
 
-三页导航式设计，共享样式和交互逻辑：
+四页导航式设计，共享样式和交互逻辑：
 
 | 页面 | 文件 | 内容 |
 |------|------|------|
@@ -35,6 +35,7 @@ claude-code-intro/
 ├── skills.html
 ├── style.css
 ├── shared.js
+├── CHANGELOG.md
 └── images/
     ├── showcase/       # 作品展示截图
     └── install/        # 安装步骤截图

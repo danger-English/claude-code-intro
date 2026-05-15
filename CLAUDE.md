@@ -19,6 +19,7 @@ claude-code-intro/
 ├── skills.html         # 第四页：进阶技巧 — Skill 推荐
 ├── style.css           # 共享样式
 ├── shared.js           # 共享交互逻辑
+├── CHANGELOG.md        # 修改记录
 ├── images/
 │   ├── showcase/       # index.html 作品展示截图（webpage.png / miniprogram.png / game.png）
 │   └── install/        # install.html 安装步骤截图
@@ -47,7 +48,7 @@ claude-code-intro/
 
 内容范围（止步于"能跑起来"）：
 - 一. Claude Code 安装（Mac/Windows，有魔法/无魔法）
-- 二. 接模型（CC Switch 配置国产模型）
+- 二. 接模型（CC Switch 配置国产模型 + 8 个国产模型 API 获取链接，前 4 个推荐）
 - 三. 启动 Claude Code（首次设置、cd 到目标文件夹）
 - **不包含** CLAUDE.md 写法（归 usage.html）
 
@@ -124,7 +125,7 @@ claude-code-intro/
 - **真实案例优先**：展示的内容必须是 Claude Code 真实能做到的，不夸大
 - **步骤可视化**：安装和使用步骤用编号 + 高亮，不靠纯文字堆砌
 - **移动友好**：手机端体验不能打折
-- **导航清晰**：三页之间跳转明显，用户不会迷路
+- **导航清晰**：四页之间跳转明显，用户不会迷路
 
 ## 验证方式
 
