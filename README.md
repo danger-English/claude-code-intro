@@ -2,7 +2,8 @@
 
 面向不了解 Claude Code 的用户，用真实案例和交互体验让他们理解"Claude Code 能做什么"，并引导安装和正确使用。
 
-**在线浏览**: https://danger-English.github.io/claude-code-intro/
+**在线浏览**: https://danger-English.github.io/claude-code-intro/ （需翻墙）
+**国内镜像**: https://cclearning.cn/
 
 ## 网站结构
 

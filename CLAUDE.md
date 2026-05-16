@@ -145,4 +145,5 @@ claude-code-intro/
 
 - GitHub Pages，从 master 分支 / (root) 部署
 - 仓库：https://github.com/danger-English/claude-code-intro
-- 线上：https://danger-English.github.io/claude-code-intro/
+- 线上：https://danger-English.github.io/claude-code-intro/（需翻墙）
+- 国内镜像：https://cclearning.cn/
