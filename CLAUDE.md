@@ -19,6 +19,7 @@ claude-code-intro/
 ├── skills.html         # 第四页：进阶技巧 — Skill 推荐 + Skill 库
 ├── style.css           # 共享样式
 ├── shared.js           # 共享交互逻辑
+├── particles.js        # Three.js 粒子星场背景（四页通用）
 ├── CHANGELOG.md        # 修改记录
 ├── images/
 │   ├── showcase/       # index.html 作品展示截图（webpage.png / miniprogram.png / game.png）
@@ -103,9 +104,10 @@ claude-code-intro/
 ## 技术栈
 
 - 纯 HTML + CSS + 原生 JS，无框架
+- Three.js（via CDN）驱动的全屏粒子星场背景
 - Google Fonts（Outfit + JetBrains Mono + Noto Serif SC）
 - 设计风格：编辑终端美学——深色主题（#090909）、琥珀强调色（#F5A623）、终端绿（#2DD4A8）、奶白文字（#F2EDE8）
-- 四个页面共享 style.css + shared.js，保持视觉一致性
+- 四个页面共享 style.css + shared.js + particles.js，保持视觉一致性
 
 ### shared.js 功能
 - 滚动进度条（顶部 3px 渐变条）
@@ -119,6 +121,13 @@ claude-code-intro/
 - 光标悬停标题时，标题颜色过渡到光标色
 - Stats 滚动计数器动画
 - 按钮涟漪效果
+
+### particles.js 功能
+- 基于 Three.js 的全屏粒子星场背景，四页通用
+- 2200 粒子漂浮 + 鼠标力场交互（推开 + 弹性回拉）+ 近距粒子自动连线
+- 每页独立色调：index 琥珀+绿 / install 黄+琥珀 / usage 绿+琥珀 / skills 琥珀+蓝
+- 滚动时粒子最低保持 15% 可见度；移动端 / Three.js 加载失败自动降级
+- 半透明背景穿透设计：`--bg-alt` 55% / `--bg-card` 60%，粒子可透过板块分隔区
 
 ### 工具类（style.css）
 - `.prose` — 正文段落样式（ink-2, 15px, line-height 2）

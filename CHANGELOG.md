@@ -2,6 +2,24 @@
 
 ## 2026-05-16
 
+### 全站 Three.js 粒子星场背景
+
+- 新增 `particles.js` — 基于 Three.js 的交互式粒子系统，全站四页统一使用
+- 2200 粒子漂浮 + 鼠标力场交互（推开 + 弹性回拉）+ 近距粒子自动连线
+- 每页独立色调：index 琥珀+绿 / install 黄+琥珀 / usage 绿+琥珀 / skills 琥珀+蓝
+- 滚动时粒子最低保持 15% 可见度，不干扰内容阅读
+- 移动端 / Three.js 加载失败自动降级，不影响原有体验
+- 所有卡片、终端、代码块背景改为半透明（`--bg-alt: 55%` / `--bg-card: 60%`），粒子可穿透
+
+### 新增文件
+
+- 新增 `particles.js` — 粒子星场核心脚本
+
+### 改动文件
+
+- `index.html` / `install.html` / `usage.html` / `skills.html` — 引入 Three.js CDN + particles.js
+- `style.css` — 新增 `#particle-canvas` 样式；`--bg-alt` / `--bg-card` 改为 rgba 半透明；section、card、terminal、showcase 等容器统一加 backdrop-filter
+
 ### README.md / CLAUDE.md — 新增国内镜像链接
 
 - 部署信息新增国内镜像 https://cclearning.cn/，方便不翻墙用户访问

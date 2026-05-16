@@ -7,8 +7,8 @@
 :root {
   /* ---- Surface ---- */
   --bg:       #090909;
-  --bg-alt:   #0F0F0F;
-  --bg-card:  #131313;
+  --bg-alt:   rgba(15, 15, 15, 0.55);
+  --bg-card:  rgba(19, 19, 19, 0.6);
   --bg-hover: #1A1A1A;
   --bg-input: #111111;
 
@@ -130,6 +130,8 @@ code:not(.code-block code) {
 .section {
   padding: clamp(80px, 14vw, 180px) 0;
   position: relative;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .section + .section { border-top: 1px solid rgba(255,255,255,0.03); }
@@ -259,6 +261,8 @@ code:not(.code-block code) {
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .terminal-bar {
@@ -301,6 +305,23 @@ code:not(.code-block code) {
 .t-success { color: var(--term-green); }
 .t-dim { color: var(--ink-3); }
 .t-think { color: var(--ink-3); font-style: italic; }
+
+/* ============================================================
+   PARTICLE CANVAS
+   ============================================================ */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  animation: particleFadeIn 2s 0.5s ease forwards;
+}
+@keyframes particleFadeIn {
+  to { opacity: 1; }
+}
 
 /* ============================================================
    HERO
@@ -435,6 +456,8 @@ code:not(.code-block code) {
   justify-content: center;
   padding: 80px var(--gutter);
   position: relative;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .showcase-item:nth-child(even) { background: var(--bg-alt); }
 
@@ -523,6 +546,8 @@ code:not(.code-block code) {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.02);
   transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .showcase-terminal:hover {
   transform: translateY(-6px) rotateX(1deg);
@@ -639,6 +664,8 @@ code:not(.code-block code) {
   border-radius: var(--radius);
   padding: 28px;
   transition: border-color 0.3s, background 0.3s, transform 0.3s var(--ease-out);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .card:hover {
   border-color: rgba(245, 166, 35, 0.12);
@@ -777,6 +804,8 @@ code:not(.code-block code) {
   color: var(--ink-2);
   overflow-x: auto;
   position: relative;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .code-block code { color: var(--ink); }
 
@@ -844,6 +873,8 @@ code:not(.code-block code) {
   position: relative;
   overflow: hidden;
   transition: border-color 0.3s, transform 0.3s var(--ease-out);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .layer-card::before {
   content: '';
@@ -1211,6 +1242,8 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.05);
   border-bottom: 1px solid rgba(255,255,255,0.05);
   background: var(--bg-alt);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .stats-grid {
   display: grid;
@@ -1394,6 +1427,8 @@ footer {
   border: 1px solid rgba(45,212,168,0.12);
   border-radius: var(--radius);
   overflow: hidden;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .analogy-visual {
@@ -1641,6 +1676,9 @@ footer {
    ============================================================ */
 .skill-showcase {
   padding: clamp(80px, 14vw, 160px) 0;
+  position: relative;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .skill-showcase + .skill-showcase { border-top: 1px solid rgba(255,255,255,0.03); }
 

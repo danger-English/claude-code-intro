@@ -19,6 +19,7 @@
 ## 技术栈
 
 - 纯 HTML + CSS + 原生 JS，无框架依赖
+- Three.js 粒子星场背景（四页通用，每页独立色调）
 - Google Fonts（Outfit + JetBrains Mono + Noto Serif SC）
 - 深色终端美学设计（#090909 暗底 + #F5A623 琥珀 + #2DD4A8 终端绿）
 
@@ -36,6 +37,7 @@ claude-code-intro/
 ├── skills.html
 ├── style.css
 ├── shared.js
+├── particles.js        # Three.js 粒子星场背景
 ├── CHANGELOG.md
 ├── images/
 │   ├── showcase/       # 作品展示截图
