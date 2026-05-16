@@ -20,6 +20,7 @@ claude-code-intro/
 ├── style.css           # 共享样式
 ├── shared.js           # 共享交互逻辑
 ├── particles.js        # Three.js 粒子星场背景（四页通用）
+├── three.min.js        # Three.js r128 本地副本（避免 CDN 被墙）
 ├── CHANGELOG.md        # 修改记录
 ├── images/
 │   ├── showcase/       # index.html 作品展示截图（webpage.png / miniprogram.png / game.png）

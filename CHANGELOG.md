@@ -17,7 +17,7 @@
 
 ### 改动文件
 
-- `index.html` / `install.html` / `usage.html` / `skills.html` — 引入 Three.js CDN + particles.js
+- `index.html` / `install.html` / `usage.html` / `skills.html` — 引入 Three.js（本地 three.min.js）+ particles.js
 - `style.css` — 新增 `#particle-canvas` 样式；`--bg-alt` / `--bg-card` 改为 rgba 半透明；section、card、terminal、showcase 等容器统一加 backdrop-filter
 
 ### README.md / CLAUDE.md — 新增国内镜像链接
