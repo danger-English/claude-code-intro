@@ -1,0 +1,56 @@
+{
+  "skill_name": "docx",
+  "version": "1.0",
+  "experiences": [
+    {
+      "id": 1,
+      "timestamp": "2026-05-06T14:00:00+08:00",
+      "type": "error",
+      "description": "pandoc 命令未找到，无法用 pandoc 提取 docx 文本",
+      "reason": "当前 Windows 环境未安装 pandoc",
+      "suggestion": "不要尝试 pandoc，直接走 PowerShell 路径",
+      "context": "处理用户提供的 .docx 直播文字稿时触发",
+      "applied": true
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-05-06T14:01:00+08:00",
+      "type": "error",
+      "description": "用 docx skill 的 unpack.py 脚本时，Python 缺少 defusedxml 模块",
+      "reason": "当前 py launcher 环境未安装 defusedxml 包",
+      "suggestion": "不要尝试 unpack.py，直接走 PowerShell 路径",
+      "context": "pandoc 失败后尝试第二条路时触发",
+      "applied": true
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-05-06T14:02:00+08:00",
+      "type": "error",
+      "description": "PowerShell Expand-Archive 不认 .docx 扩展名，报'不是支持的存档文件格式'",
+      "reason": "Expand-Archive 只认 .zip/.7z/.cab，不认 .docx",
+      "suggestion": "先 Copy-Item 为 .zip 再解压",
+      "context": "pandoc 和 python 都失败后尝试 PowerShell 时触发",
+      "applied": true
+    },
+    {
+      "id": 4,
+      "timestamp": "2026-05-06T14:03:00+08:00",
+      "type": "改进",
+      "description": "docx 提取的正确路径：Copy .docx 为 .zip → Expand-Archive → PowerShell XML 解析 document.xml → 提取 w:t 文本节点",
+      "reason": "无需安装任何额外依赖，纯 PowerShell 原生能力",
+      "suggestion": "已写入项目 CLAUDE.md 的'工具链：docx 文件读取'章节，作为标准 SOP",
+      "context": "连续4次失败后找到可行路径",
+      "applied": true
+    },
+    {
+      "id": 5,
+      "timestamp": "2026-05-06T14:04:00+08:00",
+      "type": "改进",
+      "description": "遇到连续失败时应立即切换思路而非反复微调同一方案。本次 pandoc 失败后应直接检查 PowerShell 可用性，而非尝试 python unpack",
+      "reason": "没有先评估当前环境的工具链就盲目尝试",
+      "suggestion": "遇到工具缺失时，第一步是评估当前环境有什么可用工具（检查 py、python3、powershell），再选路径",
+      "context": "用户指出'连续报错这么多轮就该停下来检查'",
+      "applied": true
+    }
+  ]
+}

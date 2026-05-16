@@ -86,31 +86,21 @@
       <p class="section-desc">两种方式，选一种就行。</p>
     </div>
 
-    <div class="grid-3 reveal" style="max-width:960px;margin:0 auto;">
+    <div class="grid-2 reveal" style="max-width:800px;margin:0 auto;">
       <div class="card">
-        <h3>方法一：命令安装 <span class="badge-recommended">推荐</span></h3>
-        <p>直接在 Claude Code 里说：</p>
+        <h3>命令安装 <span class="badge-recommended">推荐</span></h3>
+        <p>以 <code>skill-creator</code> 为例，在 Claude Code 里说：</p>
         <div class="code-block" style="margin-top:12px;">
           <code>安装这个 skill，skill 项目地址为:<br>https://github.com/danger-English/claude-code-intro/tree/master/skills/skill-creator</code>
-          <button class="copy-btn">Copy</button>
         </div>
         <p class="hint-text" style="margin-top:12px;">复制后直接发给 Claude，它会自动帮你下载并安装。</p>
+        <p class="hint-text" style="margin-top:8px;color:#E85D4A;">需要能访问对应的网站（如 GitHub），无法访问请选手动安装。</p>
       </div>
       <div class="card">
-        <h3>方法二：从本页下载</h3>
-        <p>点击下方「一键下载全部 Skill」按钮，获取打包好的 zip 文件。</p>
+        <h3>手动安装</h3>
+        <p>以 <code>skill-creator</code> 为例，获取文件夹后放到指定目录：</p>
         <div class="code-block" style="margin-top:12px;">
-          <code>解压后放到 ~/.claude/skills/ 目录</code>
-          <button class="copy-btn">Copy</button>
-        </div>
-        <p class="hint-text" style="margin-top:12px;">无需翻墙，文件已内置于本站仓库。Claude Code 支持热重载，无需重启。</p>
-      </div>
-      <div class="card">
-        <h3>方法三：手动安装</h3>
-        <p>将 Skill 文件夹放到指定目录：</p>
-        <div class="code-block" style="margin-top:12px;">
-          <code>~/.claude/skills/</code>
-          <button class="copy-btn">Copy</button>
+          <code>~/.claude/skills/skill-creator</code>
         </div>
         <p class="hint-text" style="margin-top:12px;">手动创建 skills 文件夹，放入即可。Claude Code 支持热重载，无需重启。</p>
       </div>
@@ -321,6 +311,43 @@
         </div>
         <button class="skill-install-btn" onclick="copyInstall('安装这个 skill，skill 项目地址为: https://github.com/danger-English/claude-code-intro/tree/master/skills/skill-evolution-manager')">复制安装命令</button>
         <a class="skill-install-btn" href="skill-evolution-manager.zip" download style="text-decoration:none;display:inline-block;margin-top:8px;background:var(--ink);color:var(--bg);">下载文件夹（2.6KB）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILL LIBRARY ============ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">Skill 库</div>
+      <h2 class="section-title">更多好用的 Skill</h2>
+      <p class="section-desc">持续更新中。找不到你想要的？反馈给我，我来找。</p>
+    </div>
+
+    <div class="grid-3 reveal" style="max-width:900px;margin:0 auto;gap:16px;">
+      <div class="card" style="padding:28px 24px;">
+        <h3 style="margin:0 0 4px;">docx / xlsx / pdf / pptx</h3>
+        <p style="font-size:13px;color:var(--ink-2);margin:0 0 12px;">办公四件套</p>
+        <a href="office-skills.zip" download style="font-family:var(--mono);font-size:13px;color:var(--accent);text-decoration:none;">下载文件夹</a>
+      </div>
+      <div class="card" style="padding:28px 24px;">
+        <h3 style="margin:0 0 4px;">neat-freak</h3>
+        <p style="font-size:13px;color:var(--ink-2);margin:0 0 12px;">洁癖</p>
+        <a href="neat-freak.zip" download style="font-family:var(--mono);font-size:13px;color:var(--accent);text-decoration:none;">下载文件夹</a>
+      </div>
+      <div class="card" style="padding:28px 24px;">
+        <h3 style="margin:0 0 4px;">pua</h3>
+        <p style="font-size:13px;color:var(--ink-2);margin:0 0 12px;">提高效率</p>
+        <a href="pua.zip" download style="font-family:var(--mono);font-size:13px;color:var(--accent);text-decoration:none;">下载文件夹</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="max-width:800px;margin:40px auto 0;text-align:center;">
+      <div class="card" style="padding:32px;">
+        <p style="font-size:15px;color:var(--ink-1);margin:0 0 8px;">找不到你需要的 Skill？</p>
+        <p class="hint-text" style="margin:0 0 16px;">告诉我你想要什么能力，我来找、整理、上传。</p>
+        <a href="mailto:3602822098@qq.com" style="font-family:var(--mono);font-size:14px;color:var(--accent);text-decoration:none;">3602822098@qq.com</a>
       </div>
     </div>
   </div>

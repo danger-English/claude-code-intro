@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-05-16
+
+### skills.html — 安装方式精简 + 新增 Skill 库
+
+- 安装方式从 3 种精简为 2 种（命令安装 / 手动安装），命令安装标注翻墙前提
+- 新增 Skill 库板块：3 个可下载 Skill（办公四件套 docx/xlsx/pdf/pptx、neat-freak、pua）
+- 反馈方式从 GitHub Issues 改为邮箱（3602822098@qq.com），适配国内用户
+
+### 新增文件
+
+- 新增 `skills/docx/`、`skills/xlsx/`、`skills/pdf/`、`skills/pptx/` — 办公四件套 Skill 本地副本
+- 新增 `skills/neat-freak/` — 洁癖 Skill 本地副本
+- 新增 `skills/pua/` — PUA Skill 本地副本
+- 新增 `office-skills.zip`、`neat-freak.zip`、`pua.zip` — 独立下载包
+
 ## 2026-05-15
 
 ### install.html — 添加模型 API 获取链接

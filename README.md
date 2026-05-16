@@ -36,7 +36,23 @@ claude-code-intro/
 ├── style.css
 ├── shared.js
 ├── CHANGELOG.md
-└── images/
-    ├── showcase/       # 作品展示截图
-    └── install/        # 安装步骤截图
+├── images/
+│   ├── showcase/       # 作品展示截图
+│   └── install/        # 安装步骤截图
+├── claude-code-skills.zip   # 一键下载全部推荐 Skill
+├── office-skills.zip        # 办公四件套合集
+├── neat-freak.zip           # 洁癖 skill
+├── pua.zip                  # pua skill
+└── skills/             # Skill 本地副本
+    ├── web-access/
+    ├── using-superpowers/
+    ├── frontend-design/
+    ├── skill-creator/
+    ├── skill-evolution-manager/
+    ├── docx/
+    ├── xlsx/
+    ├── pdf/
+    ├── pptx/
+    ├── neat-freak/
+    └── pua/
 ```

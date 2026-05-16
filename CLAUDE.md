@@ -16,7 +16,7 @@ claude-code-intro/
 ├── index.html          # 第一页：为什么要用 Claude Code
 ├── install.html        # 第二页：怎么安装 Claude Code
 ├── usage.html          # 第三页：怎么用好 Claude Code
-├── skills.html         # 第四页：进阶技巧 — Skill 推荐
+├── skills.html         # 第四页：进阶技巧 — Skill 推荐 + Skill 库
 ├── style.css           # 共享样式
 ├── shared.js           # 共享交互逻辑
 ├── CHANGELOG.md        # 修改记录
@@ -24,12 +24,21 @@ claude-code-intro/
 │   ├── showcase/       # index.html 作品展示截图（webpage.png / miniprogram.png / game.png）
 │   └── install/        # install.html 安装步骤截图
 ├── claude-code-skills.zip   # 一键下载全部推荐 Skill（231KB）
-└── skills/             # 推荐 Skill 的本地副本，供无法翻墙的用户下载
+├── office-skills.zip        # 办公四件套合集（docx/xlsx/pdf/pptx）
+├── neat-freak.zip           # 洁癖 skill
+├── pua.zip                  # pua skill
+└── skills/             # Skill 本地副本，供无法翻墙的用户下载
     ├── web-access/
     ├── using-superpowers/   # superpowers 主 skill，含 14 个子 skill
     ├── frontend-design/
     ├── skill-creator/
-    └── skill-evolution-manager/
+    ├── skill-evolution-manager/
+    ├── docx/
+    ├── xlsx/
+    ├── pdf/
+    ├── pptx/
+    ├── neat-freak/
+    └── pua/
 ```
 
 ### 第一页：为什么要用（index.html）
@@ -84,8 +93,9 @@ claude-code-intro/
 - Hero：一句话钩子（给 Agent 装上超能力）
 - 什么是 Skill：实习生类比（Prompt vs Skill vs MCP）
 - 渐进式披露：Skill 的设计哲学（先目录、再章节、最后附录）
-- 如何使用：三种安装方式（命令安装 / zip 下载 / 手动安装到 ~/.claude/skills/）
+- 如何使用：两种安装方式（命令安装 / 手动安装到 ~/.claude/skills/）
 - 五个推荐 Skill：每个 Skill 独立 showcase 区域，大字锚点（眼/思/美/创/迭代）+ 终端安装演示 + 复制按钮 + 独立 zip 下载
+- Skill 库：更多可下载的 Skill（办公四件套、neat-freak、pua），邮箱反馈入口（3602822098@qq.com）
 - 底部跳转：返回使用指南 / 回看安装指南
 
 **已知问题：** 推荐的 5 个 skill 中，web-access、superpowers、skill-evolution-manager 的 GitHub URL 不存在（anthropics/skills 仓库中无此目录）。已通过在项目 `skills/` 目录下放置本地副本解决，用户可直接下载 zip 文件。
@@ -95,7 +105,7 @@ claude-code-intro/
 - 纯 HTML + CSS + 原生 JS，无框架
 - Google Fonts（Outfit + JetBrains Mono + Noto Serif SC）
 - 设计风格：编辑终端美学——深色主题（#090909）、琥珀强调色（#F5A623）、终端绿（#2DD4A8）、奶白文字（#F2EDE8）
-- 三个页面共享 style.css + shared.js，保持视觉一致性
+- 四个页面共享 style.css + shared.js，保持视觉一致性
 
 ### shared.js 功能
 - 滚动进度条（顶部 3px 渐变条）
