@@ -2,6 +2,13 @@
 
 ## 2026-05-16
 
+### 图片优化 + 加载性能修复
+
+- `images/showcase/game.png`（5MB）替换为 `game.jpg`（391KB），加载速度大幅提升
+- Three.js 从 CDN 引用改为本地 `three.min.js`（603KB），解决国内 CDN 被墙问题
+- 所有四页 `<script>` 标签加 `defer`，避免 603KB 文件阻塞页面渲染
+- `index.html` 图片引用同步更新为 `game.jpg`
+
 ### 全站 Three.js 粒子星场背景
 
 - 新增 `particles.js` — 基于 Three.js 的交互式粒子系统，全站四页统一使用

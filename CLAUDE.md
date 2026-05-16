@@ -23,7 +23,7 @@ claude-code-intro/
 ├── three.min.js        # Three.js r128 本地副本（避免 CDN 被墙）
 ├── CHANGELOG.md        # 修改记录
 ├── images/
-│   ├── showcase/       # index.html 作品展示截图（webpage.png / miniprogram.png / game.png）
+│   ├── showcase/       # index.html 作品展示截图（webpage.png / miniprogram.png / game.jpg）
 │   └── install/        # install.html 安装步骤截图
 ├── claude-code-skills.zip   # 一键下载全部推荐 Skill（231KB）
 ├── office-skills.zip        # 办公四件套合集（docx/xlsx/pdf/pptx）
