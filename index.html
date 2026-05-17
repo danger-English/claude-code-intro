@@ -57,6 +57,44 @@
           <!-- Lines injected by JS -->
         </div>
       </div>
+
+      <!-- Product Preview — appears after terminal finishes -->
+      <div class="term-result" id="term-result">
+        <div class="term-result-arrow"></div>
+        <div class="term-result-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="app-bar">
+              <span class="app-bar-title">WordFlow</span>
+              <span class="app-bar-streak">🔥 7天</span>
+            </div>
+            <div class="flashcard-scene">
+              <div class="flashcard">
+                <div class="flashcard-front">
+                  <div class="flashcard-word">ephemeral</div>
+                  <div class="flashcard-phonetic">/ɪˈfem.ər.əl/</div>
+                  <div class="flashcard-hint">adj. 短暂的，转瞬即逝的</div>
+                </div>
+              </div>
+            </div>
+            <div class="review-bar">
+              <div class="review-dot done"></div>
+              <div class="review-dot done"></div>
+              <div class="review-dot active"></div>
+              <div class="review-dot"></div>
+              <div class="review-dot"></div>
+              <div class="review-dot"></div>
+              <div class="review-dot"></div>
+              <div class="review-dot"></div>
+            </div>
+            <div class="app-actions">
+              <button class="app-btn btn-hard">不认识</button>
+              <button class="app-btn btn-ok">模糊</button>
+              <button class="app-btn btn-easy">认识</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="scroll-hint">SCROLL</div>
@@ -297,6 +335,10 @@
   }
 
   setTimeout(addLine, 1800);
+
+  // Reveal product preview after "Done" line appears (~8060ms from page load)
+  const result = document.getElementById('term-result');
+  if (result) setTimeout(() => result.classList.add('show'), 8200);
 })();
 </script>
 </body>

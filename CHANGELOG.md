@@ -1,5 +1,26 @@
 # Changelog
 
+## 2026-05-17
+
+### index.html — Hero 终端演示增加产品预览
+
+终端打字动画结束后，下方滑入一个手机样式的背单词小程序（WordFlow）预览卡片，补全 prompt → 过程 → 结果 的叙事链。
+
+- 纯 CSS 绘制手机框架 + 单词卡界面（ephemeral / 音标 / 释义）
+- 艾宾浩斯复习进度条（8 个圆点，done/active 状态）+ 三档按钮（不认识/模糊/认识）
+- 箭头连接线从终端指向手机，视觉上表达因果关系
+- 时序精确控制：终端 "Done" 行出现后 140ms 手机卡片才淡入（8200ms）
+- 手机卡片初始 `opacity: 0` + `translateY(20px)`，通过 `.show` 类触发 0.6s 过渡动画
+
+### style.css — 新增手机预览卡片样式
+
+- `.term-result` — 淡入容器（flex column + transition）
+- `.term-result-arrow` — 箭头连接线（1px 渐变 + CSS 三角形）
+- `.term-result-phone` — 手机框架（220px 宽，24px 圆角，amber 边框 + 发光阴影）
+- `.phone-notch` / `.phone-screen` — 刘海 + 屏幕区域
+- `.app-bar` / `.flashcard` / `.review-bar` / `.app-actions` — 单词卡界面各组件
+- `.app-btn` 三色按钮（红/黄/绿）对应不认识/模糊/认识
+
 ## 2026-05-16
 
 ### 图片优化 + 加载性能修复
