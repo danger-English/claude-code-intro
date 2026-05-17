@@ -9,10 +9,11 @@
 
   // ---- Page-specific accent colors ----
   const PAGE_COLORS = {
-    'index.html':   { core: 0xf5a623, glow: 0x2dd4a8 },  // amber + green
-    'install.html': { core: 0xffbd2e, glow: 0xf5a623 },  // yellow + amber
-    'usage.html':   { core: 0x2dd4a8, glow: 0xf5a623 },  // green + amber
-    'skills.html':  { core: 0xf5a623, glow: 0x60a5fa },  // amber + blue
+    'index.html':    { core: 0xf5a623, glow: 0x2dd4a8 },  // amber + green
+    'install.html':  { core: 0xffbd2e, glow: 0xf5a623 },  // yellow + amber
+    'usage.html':    { core: 0x2dd4a8, glow: 0xf5a623 },  // green + amber
+    'skills.html':   { core: 0xf5a623, glow: 0x60a5fa },  // amber + blue
+    'experience.html': { core: 0xf5a623, glow: 0xa78bfa }, // amber + purple
   };
 
   const page = location.pathname.split('/').pop() || 'index.html';

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>实战经验 — 从零到上线的完整路径 | Claude Code Intro</title>
+<meta name="description" content="基于 claude-code-intro 项目的实战经验：工具选择、架构设计、常见问题、交互设计、粒子背景、部署上线的完整路径。">
+<meta property="og:title" content="实战经验 — 从零到上线的完整路径">
+<meta property="og:description" content="一个英语专业大学生用 Claude Code 做网站的完整实战经验分享。">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▸</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@200;300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">claude code</a>
+  <div class="nav-links">
+    <a href="index.html">为什么用</a>
+    <a href="install.html">怎么安装</a>
+    <a href="usage.html">怎么用好</a>
+    <a href="skills.html">进阶技巧</a>
+    <a href="experience.html" class="active">实战经验</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- HERO -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="hero" style="min-height:65vh;">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">// field report</p>
+    <h1 style="min-height:60px;">
+      <span class="decode" data-decode-hero data-decode-delay="800" data-text="从零到上线的实战经验">从零到上线的实战经验</span>
+    </h1>
+    <p class="hero-sub">
+      <span class="decode" data-decode-hero data-decode-delay="2200" data-text="一个英语专业大学生的 AI 编程实践">一个英语专业大学生的 AI 编程实践</span><br>
+      <span class="decode" data-decode-hero data-decode-delay="3000" data-text="从第一行代码到网站上线的完整路径">从第一行代码到网站上线的完整路径</span>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 一、为什么选 Claude Code -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin:0 auto;">
+      <div class="section-tag">工具选择</div>
+      <h2 class="section-title" style="margin-bottom:28px;">
+        <span class="decode" data-text="为什么选 Claude Code">为什么选 Claude Code</span>
+      </h2>
+      <div class="prose">
+        <p>作为一个英语专业的学生，我并没有系统学过前端开发。但我想做一个网站来推广 Claude Code，向不了解它的人展示"Claude Code 能做什么"。问题来了：我不会写代码，怎么办？</p>
+        <p>答案就是——<strong style="color:var(--ink);">用 Claude Code 来做 Claude Code 的推广网站</strong>。这本身就是一个最好的案例。</p>
+        <p>Claude Code 不是一个简单的代码补全工具，而是一个能理解需求、规划架构、编写代码、调试修复的全能 Agent。你用自然语言告诉它你想做什么，它就能帮你做出来。</p>
+      </div>
+      <blockquote class="pull-quote">
+        "传统方式：学 HTML → 学 CSS → 学 JS → 学框架 → 写代码 → 调试 → 部署（数月）。Claude Code 方式：描述需求 → AI 生成代码 → 验证效果 → 迭代优化（数天）。"
+      </blockquote>
+      <div class="prose" style="margin-top:24px;">
+        <p>核心优势：你不需要成为专家，但你需要知道"什么是好的"。<strong style="color:var(--ink);">审美判断力和产品思维比编码能力更重要。</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 二、安装与配置 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">getting started</div>
+      <h2 class="section-title">安装与配置</h2>
+      <p class="section-desc">四步完成安装，零门槛上手</p>
+    </div>
+    <div class="exp-grid" style="max-width:800px;margin:0 auto;">
+      <div class="exp-step reveal">
+        <div class="exp-step-num">1</div>
+        <div class="exp-step-body">
+          <h3>安装 Node.js</h3>
+          <p>从 nodejs.org 下载 LTS 版本，安装后终端输入 <code>node -v</code> 验证</p>
+        </div>
+      </div>
+      <div class="exp-step reveal">
+        <div class="exp-step-num">2</div>
+        <div class="exp-step-body">
+          <h3>安装 Claude Code</h3>
+          <p>终端执行 <code>npm install -g @anthropic-ai/claude-code</code></p>
+        </div>
+      </div>
+      <div class="exp-step reveal">
+        <div class="exp-step-num">3</div>
+        <div class="exp-step-body">
+          <h3>配置 API Key</h3>
+          <p>官方 API 直接登录；国产模型配合 CC Switch 工具接入</p>
+        </div>
+      </div>
+      <div class="exp-step reveal">
+        <div class="exp-step-num">4</div>
+        <div class="exp-step-body">
+          <h3>启动</h3>
+          <p><code>cd</code> 到项目目录，输入 <code>claude</code> 启动</p>
+        </div>
+      </div>
+    </div>
+    <div class="callout callout-warn reveal" style="max-width:680px;margin:40px auto 0;">
+      <div class="callout-label">↳ 提示</div>
+      <p>建议在项目根目录创建 <code>CLAUDE.md</code> 文件，写明项目信息和约束。这是 Claude Code 的"记忆文件"，它会自动读取并遵循其中的规则。但不要超过 200 行——超过 80 行后开始出现信息遗漏。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 三、项目架构设计 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">architecture</div>
+      <h2 class="section-title">项目架构设计</h2>
+      <p class="section-desc">好的架构是成功的一半——先和 Claude Code 对齐结构，再动手写代码</p>
+    </div>
+    <div class="reveal" style="max-width:680px;margin:0 auto;">
+      <div class="prose">
+        <p>采用扁平结构，四个页面各一个 HTML 文件，共享样式和脚本：</p>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn">Copy</button>
+        <code>claude-code-intro/
+├── index.html          # 首页：为什么要用
+├── install.html        # 安装页：怎么安装
+├── usage.html          # 使用页：怎么用好
+├── skills.html         # 进阶页：Skill 推荐
+├── experience.html     # 实战页：开发经验
+├── style.css           # 共享样式（四页统一）
+├── shared.js           # 共享交互逻辑
+├── particles.js        # Three.js 粒子背景
+├── three.min.js        # Three.js 本地副本
+└── images/             # 截图和素材</code>
+      </div>
+      <div class="prose" style="margin-top:24px;">
+        <p>设计风格采用"编辑终端美学"——深色背景 + 琥珀强调色 + 终端绿 + 奶白文字。所有颜色通过 CSS 变量统一管理：</p>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn">Copy</button>
+        <code>--bg: #090909       /* 深黑背景 */
+--accent: #F5A623   /* 琥珀强调 */
+--success: #2DD4A8  /* 终端绿 */
+--ink: #F2EDE8      /* 奶白文字 */</code>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 四、常见问题与解决 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">troubleshooting</div>
+      <h2 class="section-title">常见问题与解决</h2>
+      <p class="section-desc">每个环节都会遇到问题——关键是怎么解决</p>
+    </div>
+    <div class="exp-grid" style="max-width:900px;margin:0 auto;">
+
+      <div class="callout callout-warn reveal">
+        <div class="callout-label">↳ 图片加载慢</div>
+        <p><strong style="color:var(--ink);">问题：</strong>游戏截图 game.png 有 5MB，加载好几秒。</p>
+        <p><strong style="color:var(--ink);">解决：</strong>PNG 转 JPG（391KB），压缩率超过 90%。照片类图片 JPG 压缩效果远好于 PNG。</p>
+      </div>
+
+      <div class="callout callout-warn reveal">
+        <div class="callout-label">↳ CDN 被墙</div>
+        <p><strong style="color:var(--ink);">问题：</strong>Three.js 通过 CDN 引入，国内无法访问。</p>
+        <p><strong style="color:var(--ink);">解决：</strong>下载到本地（603KB），script 标签加 <code>defer</code> 避免阻塞渲染。国内用户为主的网站，所有外部依赖都应本地化。</p>
+      </div>
+
+      <div class="callout callout-warn reveal">
+        <div class="callout-label">↳ 交互效果不生效</div>
+        <p><strong style="color:var(--ink);">问题：</strong>JS 交互在某些页面不工作。</p>
+        <p><strong style="color:var(--ink);">解决：</strong>检查脚本加载顺序，确保 script 在对应 HTML 之后，或使用 DOMContentLoaded。四页共享 shared.js，HTML 结构必须一致。</p>
+      </div>
+
+      <div class="callout callout-warn reveal">
+        <div class="callout-label">↳ 移动端适配</div>
+        <p><strong style="color:var(--ink);">问题：</strong>桌面端效果好，手机布局错乱。</p>
+        <p><strong style="color:var(--ink);">解决：</strong>用 <code>clamp()</code> 做流式排版，CSS Grid <code>auto-fill + minmax</code> 做自适应网格，粒子背景在移动端自动降级。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 五、页面板块设计 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">page design</div>
+      <h2 class="section-title">页面板块设计</h2>
+      <p class="section-desc">每个页面有明确目标，板块围绕目标组织</p>
+    </div>
+    <div class="exp-grid exp-grid-4" style="max-width:1000px;margin:0 auto;">
+
+      <div class="exp-page-card reveal">
+        <div class="exp-page-char">首</div>
+        <h3>首页 · 为什么用</h3>
+        <div class="prose" style="font-size:13px;">
+          <p>Hero 终端打字动画 + 手机预览卡片，给访客震撼。作品展示区用真实案例建立"Claude Code 很强"的认知。</p>
+        </div>
+      </div>
+
+      <div class="exp-page-card reveal">
+        <div class="exp-page-char" style="color:var(--success);">装</div>
+        <h3>安装页 · 怎么装</h3>
+        <div class="prose" style="font-size:13px;">
+          <p>按平台分流（Mac/Windows × 有无翻墙），步骤可视化高亮编号，止步于"能跑起来"。</p>
+        </div>
+      </div>
+
+      <div class="exp-page-card reveal">
+        <div class="exp-page-char" style="color:var(--term-blue);">用</div>
+        <h3>使用页 · 怎么用</h3>
+        <div class="prose" style="font-size:13px;">
+          <p>CLAUDE.md 四层体系金字塔组件，全局模板可直接复用。核心论点：约束先行比 Prompt 技巧重要。</p>
+        </div>
+      </div>
+
+      <div class="exp-page-card reveal">
+        <div class="exp-page-char" style="color:var(--term-red);">技</div>
+        <h3>进阶页 · Skill</h3>
+        <div class="prose" style="font-size:13px;">
+          <p>实习生类比解释 Prompt vs Skill vs MCP，五个推荐 Skill 大字锚点 + 终端安装演示 + zip 下载。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 六、交互设计 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">interactions</div>
+      <h2 class="section-title">交互设计</h2>
+      <p class="section-desc">交互是让网站"活起来"的关键</p>
+    </div>
+    <div class="reveal" style="max-width:720px;margin:0 auto;">
+      <div class="prose">
+        <p><strong style="color:var(--ink);">滚动驱动动画</strong> — IntersectionObserver 实现元素进入视口时的 reveal 动画，展示区使用交错动画依次出现。</p>
+        <p><strong style="color:var(--ink);">终端打字动画</strong> — 首页 Hero 模拟终端输入 prompt，逐字符显示带闪烁光标。完成后滑入手机预览卡片，时序精确到毫秒。</p>
+        <p><strong style="color:var(--ink);">自定义光标</strong> — 每页不同颜色的发光光标球，lerp 平滑跟随。悬停标题时标题颜色过渡到光标色。移动端自动隐藏。</p>
+        <p><strong style="color:var(--ink);">解码动画</strong> — Hero 标题以字符乱码 → 逐个解码浮现。首页立即触发，其他页面滚动触发。</p>
+        <p><strong style="color:var(--ink);">Tab 切换与代码复制</strong> — Mac/Windows 切换用 data-tab 模式，代码块右上角 Copy 按钮一键复制。</p>
+        <p><strong style="color:var(--ink);">按钮涟漪与计数器</strong> — 按钮点击涟漪扩散效果，统计数字滚动递增动画。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 七、粒子背景实现 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">particles</div>
+      <h2 class="section-title">粒子背景实现</h2>
+      <p class="section-desc">2200 个粒子漂浮，鼠标力场交互，近距自动连线</p>
+    </div>
+    <div class="reveal" style="max-width:680px;margin:0 auto;">
+      <div class="prose">
+        <p>选择 Three.js 而非 Canvas 2D，因为 WebGL 渲染性能更好，能轻松处理 2000+ 粒子的实时计算。</p>
+        <p>核心实现：Float32Array 存储 2200 个粒子坐标，每帧更新漂浮 + 鼠标推开 + 弹性回拉 + 连线。每页独立色调。</p>
+      </div>
+      <div class="code-block">
+        <button class="copy-btn">Copy</button>
+        <code>// 每页独立色调
+'index.html':   { core: 0xf5a623, glow: 0x2dd4a8 }  // 琥珀+绿
+'install.html': { core: 0xffbd2e, glow: 0xf5a623 }  // 黄+琥珀
+'usage.html':   { core: 0x2dd4a8, glow: 0xf5a623 }  // 绿+琥珀
+'skills.html':  { core: 0xf5a623, glow: 0x60a5fa }  // 琥珀+蓝</code>
+      </div>
+      <div class="prose" style="margin-top:24px;">
+        <p>性能优化：像素比限制 ≤2、滚动最低 15% 可见度、移动端自动降级、加载失败静默跳过。</p>
+        <p>半透明穿透设计：卡片背景用 rgba 半透明值，粒子透过内容区域隐约可见，营造深度感。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 八、网站上线 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">deployment</div>
+      <h2 class="section-title">网站上线</h2>
+      <p class="section-desc">两条路径：国外免费 vs 国内稳定</p>
+    </div>
+    <div class="exp-grid" style="max-width:800px;margin:0 auto;">
+
+      <div class="exp-deploy-card reveal">
+        <div class="exp-deploy-badge">免费方案</div>
+        <h3>GitHub Pages</h3>
+        <div class="prose" style="font-size:13px;">
+          <p>创建 GitHub 仓库 → Settings → Pages → 选择 master 分支。推送代码即自动部署。</p>
+          <p><strong style="color:var(--ink);">优点：</strong>完全免费，自动部署，版本控制。</p>
+          <p><strong style="color:var(--ink);">缺点：</strong>需要翻墙才能访问。</p>
+        </div>
+      </div>
+
+      <div class="exp-deploy-card reveal">
+        <div class="exp-deploy-badge" style="background:var(--success);">推荐方案</div>
+        <h3>国内域名 + GitHub</h3>
+        <div class="prose" style="font-size:13px;">
+          <p>阿里云/腾讯云购买 .cn 域名（约 20-30 元/年）+ DNS 解析专业版（约 10 元/月），仍通过 GitHub Pages 部署。</p>
+          <p><strong style="color:var(--ink);">优点：</strong>代码在 GitHub 管理，用户通过国内域名访问，速度快且稳定。</p>
+          <p><strong style="color:var(--ink);">成本：</strong>约 150 元/年，两条路都走最稳。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 九、上线后优化 + 总结 -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="section-hd reveal">
+      <div class="section-tag">iteration</div>
+      <h2 class="section-title">上线后优化</h2>
+      <p class="section-desc">上线不是终点——优化闭环只需三步</p>
+    </div>
+    <div class="reveal" style="max-width:680px;margin:0 auto;">
+      <div class="prose">
+        <p><strong style="color:var(--ink);">Step 1：</strong>发现问题（自己浏览或收集用户反馈）</p>
+        <p><strong style="color:var(--ink);">Step 2：</strong>让 Claude Code 修改（描述问题，直接改代码）</p>
+        <p><strong style="color:var(--ink);">Step 3：</strong>推送到 GitHub（git push，网站自动更新）</p>
+      </div>
+      <div class="code-block" style="margin-top:20px;">
+        <button class="copy-btn">Copy</button>
+        <code># 优化闭环
+发现体验问题 → 告诉 Claude Code → 它改代码 → git push → 网站更新
+# 就这么简单</code>
+      </div>
+      <div class="prose" style="margin-top:28px;">
+        <p>从首次上线到稳定版本，6 天经历了多轮迭代：新增 Skills 页面 → 补充模型链接 → 粒子背景全站应用 → 图片压缩 5MB→391KB → Hero 手机预览卡片。每次只改一个点，持续交付。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- 总结 CTA -->
+<!-- ══════════════════════════════════════════════════════ -->
+<section class="section" style="background:var(--bg-alt);">
+  <div class="container">
+    <div class="reveal" style="max-width:680px;margin:0 auto;text-align:center;">
+      <div class="section-tag">takeaway</div>
+      <h2 class="section-title" style="margin-bottom:28px;line-height:1.25;">
+        <span class="decode" data-text="核心经验">核心经验</span>
+      </h2>
+      <div class="prose" style="margin-bottom:36px;">
+        <p><strong style="color:var(--ink);">约束先行</strong> — CLAUDE.md 写得好，AI 才能稳定产出高质量代码。</p>
+        <p><strong style="color:var(--ink);">审美判断力</strong> — 你不需要会写，但需要知道什么是好的。</p>
+        <p><strong style="color:var(--ink);">迭代优于一次性</strong> — 先做 MVP，再逐步优化，每次只改一个点。</p>
+        <p><strong style="color:var(--ink);">本地化思维</strong> — 国内用户为主的项目，所有外部依赖都要考虑降级。</p>
+      </div>
+      <blockquote class="pull-quote" style="text-align:left;margin-bottom:36px;">
+        "这个网站本身就是 Claude Code 能力的最佳证明。一个不会写代码的英语专业学生，用 6 天时间做出了一个完整的推广展示站。如果你也有想法，现在就开始。"
+      </blockquote>
+      <div class="btn-group">
+        <a href="install.html" class="btn btn-primary">立即安装</a>
+        <a href="index.html" class="btn btn-secondary">返回首页</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-mark">Made with Claude Code</div>
+  <p class="footer-line">by 小满 · 2026</p>
+  <p class="footer-line en">This page was made by Claude Code — and so can yours.</p>
+</footer>
+
+<script defer src="three.min.js"></script>
+<script defer src="particles.js"></script>
+<script src="shared.js"></script>
+
+</body>
+</html>

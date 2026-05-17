@@ -232,9 +232,10 @@ document.querySelectorAll('.btn').forEach(btn => {
   if ('ontouchstart' in window) return;
 
   const COLORS = {
-    'index.html':   { core: '#FF5F57', glow: 'rgba(255,95,87,' },
-    'install.html': { core: '#FFBD2E', glow: 'rgba(255,189,46,' },
-    'usage.html':   { core: '#2DD4A8', glow: 'rgba(45,212,168,' },
+    'index.html':    { core: '#FF5F57', glow: 'rgba(255,95,87,' },
+    'install.html':  { core: '#FFBD2E', glow: 'rgba(255,189,46,' },
+    'usage.html':    { core: '#2DD4A8', glow: 'rgba(45,212,168,' },
+    'experience.html': { core: '#A78BFA', glow: 'rgba(167,139,250,' },
   };
 
   const page = location.pathname.split('/').pop() || 'index.html';
