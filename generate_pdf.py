@@ -721,6 +721,103 @@ def build_pdf():
         "推荐方案：两条路都走。GitHub Pages 做主站（免费 + 版本控制），"
         "国内域名做镜像（稳定 + 可访问）。本项目同时部署了两个地址。"
     ))
+
+    story.append(Paragraph("8.4 域名选择：不要只看价格", S["h2"]))
+    story.append(Paragraph(
+        "域名是网站的门面，选错了后期迁移成本很高。不同域名后缀在价格、稳定性、"
+        "信任度上差异很大——便宜的未必适合你，贵的也未必值得。关键要看你的用户群和使用场景。",
+        S["body"]
+    ))
+
+    story.append(Paragraph("域名后缀对比", S["h3"]))
+    domain_data = [
+        ["后缀", "年费参考", "信任度", "备案", "适用场景"],
+        [".com", "60-80 元", "最高，全球通用", "可备案", "商业项目、个人品牌首选"],
+        [".cn", "20-30 元", "国内高，需实名", "必须备案", "纯国内用户、政府/教育项目"],
+        [".net", "60-80 元", "较高，技术感强", "可备案", "技术博客、工具站"],
+        [".org", "80-100 元", "较高，公益属性", "可备案", "开源项目、非营利组织"],
+        [".io", "200-400 元", "科技圈认可，海外高", "无法备案", "面向海外的技术产品"],
+        [".xyz", "10-20 元", "低，廉价感强", "可备案", "不推荐正式项目使用"],
+        [".site/.online", "5-15 元", "极低，垃圾邮件标签", "视注册商", "仅限临时测试"],
+    ]
+    domain_table = Table(domain_data, colWidths=[
+        page_width*0.12, page_width*0.15, page_width*0.25, page_width*0.13, page_width*0.35
+    ])
+    domain_table.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), ACCENT),
+        ("TEXTCOLOR", (0, 0), (-1, 0), white),
+        ("FONTNAME", (0, 0), (-1, 0), HEI),
+        ("FONTSIZE", (0, 0), (-1, 0), 9.5),
+        ("FONTNAME", (0, 1), (-1, -1), YAHEI),
+        ("FONTSIZE", (0, 1), (-1, -1), 9),
+        ("TEXTCOLOR", (0, 1), (-1, -1), INK),
+        ("BACKGROUND", (0, 1), (-1, -1), BG_CARD),
+        ("ALIGN", (0, 0), (-1, -1), "LEFT"),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("GRID", (0, 0), (-1, -1), 0.5, RULE),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ("LEFTPADDING", (0, 0), (-1, -1), 6),
+    ]))
+    story.append(domain_table)
+    story.append(sp(3))
+
+    story.append(Paragraph("注册商选择", S["h3"]))
+    story.append(Paragraph(
+        "域名注册商的选择同样重要——稳定性、续费价格、DNS 解析速度、客服响应，"
+        "这些隐性成本往往比首年注册价更值得关注：",
+        S["body"]
+    ))
+
+    reg_data = [
+        ["注册商", "优势", "劣势", "推荐度"],
+        ["阿里云（万网）", "国内最大，备案方便，DNS 稳定", "续费偏贵，界面复杂", "国内首选"],
+        ["腾讯云", "价格实惠，与微信生态打通", "DNS 偶有波动", "性价比之选"],
+        ["Cloudflare", "成本价续费，自带 CDN/防护", "不支持备案，需翻墙管理", "海外项目首选"],
+        ["Namecheap", "首年便宜，送隐私保护", "国内访问慢，DNS 一般", "海外个人站"],
+        ["GoDaddy", "全球最大，品牌信任度高", "续费贵，界面臃肿", "不推荐"],
+    ]
+    reg_table = Table(reg_data, colWidths=[
+        page_width*0.18, page_width*0.32, page_width*0.3, page_width*0.2
+    ])
+    reg_table.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), ACCENT_2),
+        ("TEXTCOLOR", (0, 0), (-1, 0), white),
+        ("FONTNAME", (0, 0), (-1, 0), HEI),
+        ("FONTSIZE", (0, 0), (-1, 0), 9.5),
+        ("FONTNAME", (0, 1), (-1, -1), YAHEI),
+        ("FONTSIZE", (0, 1), (-1, -1), 9),
+        ("TEXTCOLOR", (0, 1), (-1, -1), INK),
+        ("BACKGROUND", (0, 1), (-1, -1), BG_CARD),
+        ("ALIGN", (0, 0), (-1, -1), "LEFT"),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("GRID", (0, 0), (-1, -1), 0.5, RULE),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ("LEFTPADDING", (0, 0), (-1, -1), 6),
+    ]))
+    story.append(reg_table)
+    story.append(sp(3))
+
+    story.append(Paragraph("选域名的三条原则", S["h3"]))
+    story.append(bullet(
+        "<b>信任度优先于价格</b>：.xyz 首年只要 10 元，但发给客户邮箱会被当垃圾邮件。"
+        ".com 贵一点，但全球通用、辨识度最高，是个人品牌和商业项目的默认选择。"
+    ))
+    story.append(bullet(
+        "<b>续费价格比首年价格更重要</b>：很多注册商首年低价引流，续费翻倍。"
+        "注册前务必查清续费价格——域名是长期投入，不是一次性消费。"
+    ))
+    story.append(bullet(
+        "<b>备案不是可选项</b>：用国内服务器必须备案，用 GitHub Pages 等海外托管可以不备案。"
+        "但备案过的域名在搜索引擎中权重更高、加载更快（可用国内 CDN），"
+        "如果目标用户全在国内，备案是值得做的事。"
+    ))
+
+    story.append(tip_box(
+        "本项目选择 .cn 域名（cclarning.cn），原因：目标用户全在国内、需要备案提升可信度、"
+        "首年成本最低。同时保留 GitHub Pages 原始地址作为海外镜像。"
+    ))
     story.append(PageBreak())
 
     # ════════════════════════════════════════
